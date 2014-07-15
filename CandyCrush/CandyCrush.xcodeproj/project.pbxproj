@@ -14,6 +14,7 @@
 		456F69001975C56300BC9DD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 456F68FE1975C56300BC9DD8 /* Main.storyboard */; };
 		456F69021975C56300BC9DD8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 456F69011975C56300BC9DD8 /* Images.xcassets */; };
 		456F690E1975C56300BC9DD8 /* CandyCrushTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456F690D1975C56300BC9DD8 /* CandyCrushTests.swift */; };
+		456F69181975D15200BC9DD8 /* Sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 456F69171975D15200BC9DD8 /* Sprites.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		456F69071975C56300BC9DD8 /* CandyCrushTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CandyCrushTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		456F690C1975C56300BC9DD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		456F690D1975C56300BC9DD8 /* CandyCrushTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandyCrushTests.swift; sourceTree = "<group>"; };
+		456F69171975D15200BC9DD8 /* Sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Sprites.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				456F68F61975C56300BC9DD8 /* AppDelegate.swift */,
 				456F68F81975C56300BC9DD8 /* GameScene.sks */,
 				456F68FA1975C56300BC9DD8 /* GameScene.swift */,
+				456F69171975D15200BC9DD8 /* Sprites.atlas */,
 				456F68FC1975C56300BC9DD8 /* GameViewController.swift */,
 				456F68FE1975C56300BC9DD8 /* Main.storyboard */,
 				456F69011975C56300BC9DD8 /* Images.xcassets */,
@@ -197,6 +200,7 @@
 			files = (
 				456F69021975C56300BC9DD8 /* Images.xcassets in Resources */,
 				456F68F91975C56300BC9DD8 /* GameScene.sks in Resources */,
+				456F69181975D15200BC9DD8 /* Sprites.atlas in Resources */,
 				456F69001975C56300BC9DD8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
