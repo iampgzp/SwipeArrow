@@ -209,6 +209,11 @@
 		B6AF4C65199965090076AEFC /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6AF4C64199965090076AEFC /* MessageUI.framework */; };
 		B6AF4C67199965130076AEFC /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6AF4C66199965130076AEFC /* StoreKit.framework */; };
 		B6AF4C691999651B0076AEFC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6AF4C681999651B0076AEFC /* SystemConfiguration.framework */; };
+		B6AF4C6E199974300076AEFC /* swipe_down.png in Resources */ = {isa = PBXBuildFile; fileRef = B6AF4C6A199974300076AEFC /* swipe_down.png */; };
+		B6AF4C6F199974300076AEFC /* swipe_left.png in Resources */ = {isa = PBXBuildFile; fileRef = B6AF4C6B199974300076AEFC /* swipe_left.png */; };
+		B6AF4C70199974300076AEFC /* swipe_up.png in Resources */ = {isa = PBXBuildFile; fileRef = B6AF4C6C199974300076AEFC /* swipe_up.png */; };
+		B6AF4C71199974300076AEFC /* swipe_right.png in Resources */ = {isa = PBXBuildFile; fileRef = B6AF4C6D199974300076AEFC /* swipe_right.png */; };
+		B6AF4C7419997CB10076AEFC /* gameOver.m in Sources */ = {isa = PBXBuildFile; fileRef = B6AF4C7319997CB10076AEFC /* gameOver.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -639,6 +644,12 @@
 		B6AF4C64199965090076AEFC /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		B6AF4C66199965130076AEFC /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		B6AF4C681999651B0076AEFC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B6AF4C6A199974300076AEFC /* swipe_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swipe_down.png; sourceTree = "<group>"; };
+		B6AF4C6B199974300076AEFC /* swipe_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swipe_left.png; sourceTree = "<group>"; };
+		B6AF4C6C199974300076AEFC /* swipe_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swipe_up.png; sourceTree = "<group>"; };
+		B6AF4C6D199974300076AEFC /* swipe_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swipe_right.png; sourceTree = "<group>"; };
+		B6AF4C7219997CB10076AEFC /* gameOver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gameOver.h; sourceTree = "<group>"; };
+		B6AF4C7319997CB10076AEFC /* gameOver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gameOver.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -724,6 +735,10 @@
 		B6042689199579FF00726F6F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B6AF4C6A199974300076AEFC /* swipe_down.png */,
+				B6AF4C6B199974300076AEFC /* swipe_left.png */,
+				B6AF4C6C199974300076AEFC /* swipe_up.png */,
+				B6AF4C6D199974300076AEFC /* swipe_right.png */,
 				B604268A199579FF00726F6F /* Default.png */,
 				B604268C199579FF00726F6F /* Default@2x.png */,
 				B604268E199579FF00726F6F /* Default-568h@2x.png */,
@@ -1467,6 +1482,8 @@
 				B60428EC19957A0100726F6F /* HelloWorldScene.m */,
 				B60428EE19957A0100726F6F /* IntroScene.h */,
 				B60428EF19957A0100726F6F /* IntroScene.m */,
+				B6AF4C7219997CB10076AEFC /* gameOver.h */,
+				B6AF4C7319997CB10076AEFC /* gameOver.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1564,12 +1581,15 @@
 				B60426A0199579FF00726F6F /* Icon-120.png in Resources */,
 				B6042696199579FF00726F6F /* Icon@2x.png in Resources */,
 				B60426A8199579FF00726F6F /* Icon-Small@2x.png in Resources */,
+				B6AF4C6F199974300076AEFC /* swipe_left.png in Resources */,
 				B604269A199579FF00726F6F /* Icon-72@2x.png in Resources */,
 				B604268B199579FF00726F6F /* Default.png in Resources */,
 				B6AF4C5E199964A30076AEFC /* README.txt in Resources */,
 				B6042694199579FF00726F6F /* Icon.png in Resources */,
+				B6AF4C6E199974300076AEFC /* swipe_down.png in Resources */,
 				B60426A2199579FF00726F6F /* Icon-iPad-Spotlight-iOS7@2x.png in Resources */,
 				B6042691199579FF00726F6F /* Default-Landscape~ipad.png in Resources */,
+				B6AF4C70199974300076AEFC /* swipe_up.png in Resources */,
 				B60426A6199579FF00726F6F /* Icon-Small.png in Resources */,
 				B60426A4199579FF00726F6F /* Icon-Small-50.png in Resources */,
 				B60428E219957A0100726F6F /* LICENSE_Chipmunk.txt in Resources */,
@@ -1583,6 +1603,7 @@
 				B60426AC199579FF00726F6F /* Icon-Spotlight-iOS7@2x.png in Resources */,
 				B604269C199579FF00726F6F /* Icon-76.png in Resources */,
 				B60426B1199579FF00726F6F /* iTunesArtwork@2x in Resources */,
+				B6AF4C71199974300076AEFC /* swipe_right.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1610,6 +1631,7 @@
 				B60426E2199579FF00726F6F /* CCCache.m in Sources */,
 				B604283B19957A0100726F6F /* OALAudioFile.m in Sources */,
 				B6042712199579FF00726F6F /* CCDrawNode.m in Sources */,
+				B6AF4C7419997CB10076AEFC /* gameOver.m in Sources */,
 				B60427FD19957A0000726F6F /* OALAudioTracks.m in Sources */,
 				B60426C9199579FF00726F6F /* CCEffectColor.m in Sources */,
 				B60426C3199579FF00726F6F /* CCEffect.m in Sources */,

@@ -10,6 +10,7 @@
 #import "HelloWorldScene.h"
 #import "IntroScene.h"
 #import "GADBannerView.h"
+#import "gameOver.h"
 
 // -----------------------------------------------------------------------
 #pragma mark - HelloWorldScene
@@ -19,6 +20,9 @@
 {
     GADBannerView *bannerView_;
     CCSprite *_sprite;
+    CCLabelTTF *scoreLabel;
+    NSInteger r;
+    NSInteger score;
 }
 
 // -----------------------------------------------------------------------
@@ -42,26 +46,24 @@
     self.userInteractionEnabled = YES;
     
     // Create a colored background (Dark Grey)
-    CCNodeColor *background = [CCNodeColor nodeWithColor:[CCColor colorWithRed:0.2f green:0.2f blue:0.2f alpha:1.0f]];
+    CCNodeColor *background = [CCNodeColor nodeWithColor:[CCColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:1.0f]];
     [self addChild:background];
     
     // Add a sprite
-    _sprite = [CCSprite spriteWithImageNamed:@"Icon-72.png"];
+    r = 0;
+    _sprite = [CCSprite spriteWithImageNamed:@"swipe_up.png"];
     _sprite.position  = ccp(self.contentSize.width/2,self.contentSize.height/2);
     [self addChild:_sprite];
-    
-    // Animate sprite with action
-    CCActionRotateBy* actionSpin = [CCActionRotateBy actionWithDuration:1.5f angle:360];
-    [_sprite runAction:[CCActionRepeatForever actionWithAction:actionSpin]];
     
     // Create a back button
     CCButton *backButton = [CCButton buttonWithTitle:@"[ Menu ]" fontName:@"Verdana-Bold" fontSize:18.0f];
     backButton.positionType = CCPositionTypeNormalized;
-    backButton.position = ccp(0.85f, 0.95f); // Top Right of screen
+    backButton.position = ccp(0.85f, 0.85f); // Top Right of screen
     [backButton setTarget:self selector:@selector(onBackClicked:)];
     [self addChild:backButton];
     
     
+    // admob implementation
     bannerView_ = [[GADBannerView alloc] initWithAdSize:kGADAdSizeSmartBannerLandscape];
     
     // Specify the ad unit ID.
@@ -76,9 +78,38 @@
     request.testDevices = @[ GAD_SIMULATOR_ID ];
     [bannerView_ loadRequest:[GADRequest request]];
     
-    
+    // add bannerview
     [[[CCDirector sharedDirector] view] addSubview:bannerView_];
 
+    
+    //add swipe gesture recog
+    UISwipeGestureRecognizer *swipeRegUp = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipe:)];
+    swipeRegUp.direction = UISwipeGestureRecognizerDirectionUp;
+    [[[CCDirector sharedDirector] view] addGestureRecognizer:swipeRegUp];
+    
+    UISwipeGestureRecognizer *swipeRegDown = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipe:)];
+    swipeRegDown.direction = UISwipeGestureRecognizerDirectionDown;
+    [[[CCDirector sharedDirector] view] addGestureRecognizer:swipeRegDown];
+    
+    UISwipeGestureRecognizer *swipeRegLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipe:)];
+    swipeRegLeft.direction = UISwipeGestureRecognizerDirectionLeft;
+    [[[CCDirector sharedDirector] view] addGestureRecognizer:swipeRegLeft];
+    
+    UISwipeGestureRecognizer *swipeRegRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipe:)];
+    swipeRegRight.direction = UISwipeGestureRecognizerDirectionRight;
+    [[[CCDirector sharedDirector] view] addGestureRecognizer:swipeRegRight];
+    
+    
+    // add string score
+    scoreLabel = [[CCLabelTTF alloc] initWithString:@"score" fontName:@"Verdana" fontSize:20.0];
+    scoreLabel.color = [CCColor blackColor];
+    scoreLabel.positionType = CCPositionTypeNormalized;
+    scoreLabel.position = ccp(0.5f,0.15f);
+    [self addChild:scoreLabel];
+    score = 0;
+    
+    
+    
     // done
 	return self;
 }
@@ -118,14 +149,36 @@
 // -----------------------------------------------------------------------
 
 -(void) touchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
-    CGPoint touchLoc = [touch locationInNode:self];
-    
-    // Log touch location
-    CCLOG(@"Move sprite to @ %@",NSStringFromCGPoint(touchLoc));
-    
-    // Move our sprite to touch location
-    CCActionMoveTo *actionMove = [CCActionMoveTo actionWithDuration:1.0f position:touchLoc];
-    [_sprite runAction:actionMove];
+//    CGPoint touchLoc = [touch locationInNode:self];
+//    
+//    // Log touch location
+//    CCLOG(@"Move sprite to @ %@",NSStringFromCGPoint(touchLoc));
+//    
+//    // Move our sprite to touch location
+//    CCActionMoveTo *actionMove = [CCActionMoveTo actionWithDuration:1.0f position:touchLoc];
+//    [_sprite runAction:actionMove];
+}
+
+-(void) didSwipe:(UISwipeGestureRecognizer *) swipeGestureRecognizer{
+    if (swipeGestureRecognizer.direction == UISwipeGestureRecognizerDirectionUp) {
+        NSLog(@"up");
+        if(r == 0)
+            score++;
+    }else if(swipeGestureRecognizer.direction == UISwipeGestureRecognizerDirectionDown){
+        NSLog(@"down");
+        if(r == 1)
+            score++;
+    }else if(swipeGestureRecognizer.direction == UISwipeGestureRecognizerDirectionLeft){
+        NSLog(@"left");
+        if(r == 2)
+            score++;
+    }else if(swipeGestureRecognizer.direction == UISwipeGestureRecognizerDirectionRight){
+        NSLog(@"right");
+        if(r == 3)
+            score++;
+    }
+    [self updateScore];
+    [self changeArrow];
 }
 
 // -----------------------------------------------------------------------
@@ -140,4 +193,46 @@
 }
 
 // -----------------------------------------------------------------------
+
+
+
+// -----------------------------------------------------------------------
+#pragma mark - Random logic
+// -----------------------------------------------------------------------
+
+- (void)changeArrow
+{
+    int r2 = arc4random()%4;
+    while (r2 == r) {
+        r2 = arc4random()%4;
+    }
+    r = r2;
+    if (r == 0) {
+        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_up.png"] texture]];
+    }else if(r == 1){
+        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_down.png"] texture]];
+    }else if(r == 2){
+        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_left.png"] texture]];
+    }else if(r == 3){
+        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_right.png"] texture]];
+    }
+}
+
+- (void)updateScore{
+    [scoreLabel setString:[NSString stringWithFormat:@"%ld",(long)score]];
+    if (score > 5) {
+        [self onGameOver];
+    }
+}
+
+- (void)onGameOver
+{
+    // start spinning scene with transition
+    [[CCDirector sharedDirector] replaceScene:[gameOver sceneWithScore:score]
+                               withTransition:[CCTransition transitionCrossFadeWithDuration:1.0f]];
+}
+
+// -----------------------------------------------------------------------
+
+
 @end
