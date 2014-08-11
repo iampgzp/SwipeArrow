@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D1CBFC7E-E823-48E4-B4DB-E89B2778F92D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>funProject</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3CB251FF-179C-458B-87B0-21ABF7312102</key>
+		<string>https://github.com/iampgzp/funProject.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>funProject/funProject.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3CB251FF-179C-458B-87B0-21ABF7312102</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/iampgzp/funProject.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3CB251FF-179C-458B-87B0-21ABF7312102</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3CB251FF-179C-458B-87B0-21ABF7312102</string>
+			<key>IDESourceControlWCCName</key>
+			<string>funProject</string>
+		</dict>
+	</array>
+</dict>
+</plist>

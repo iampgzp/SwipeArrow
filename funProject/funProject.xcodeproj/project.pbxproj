@@ -202,6 +202,13 @@
 		B60428EA19957A0100726F6F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B60428E919957A0100726F6F /* AppDelegate.m */; };
 		B60428ED19957A0100726F6F /* HelloWorldScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B60428EC19957A0100726F6F /* HelloWorldScene.m */; };
 		B60428F019957A0100726F6F /* IntroScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B60428EF19957A0100726F6F /* IntroScene.m */; };
+		B6AF4C5D199964A30076AEFC /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B6AF4C5B199964A30076AEFC /* libGoogleAdMobAds.a */; };
+		B6AF4C5E199964A30076AEFC /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = B6AF4C5C199964A30076AEFC /* README.txt */; };
+		B6AF4C61199964F00076AEFC /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6AF4C60199964F00076AEFC /* AdSupport.framework */; };
+		B6AF4C63199965030076AEFC /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6AF4C62199965030076AEFC /* CoreTelephony.framework */; };
+		B6AF4C65199965090076AEFC /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6AF4C64199965090076AEFC /* MessageUI.framework */; };
+		B6AF4C67199965130076AEFC /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6AF4C66199965130076AEFC /* StoreKit.framework */; };
+		B6AF4C691999651B0076AEFC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6AF4C681999651B0076AEFC /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -613,6 +620,25 @@
 		B60428EC19957A0100726F6F /* HelloWorldScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HelloWorldScene.m; path = Classes/HelloWorldScene.m; sourceTree = "<group>"; };
 		B60428EE19957A0100726F6F /* IntroScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IntroScene.h; path = Classes/IntroScene.h; sourceTree = "<group>"; };
 		B60428EF19957A0100726F6F /* IntroScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = IntroScene.m; path = Classes/IntroScene.m; sourceTree = "<group>"; };
+		B6AF4C4F199964A30076AEFC /* GADAdMobExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdMobExtras.h; sourceTree = "<group>"; };
+		B6AF4C50199964A30076AEFC /* GADAdNetworkExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdNetworkExtras.h; sourceTree = "<group>"; };
+		B6AF4C51199964A30076AEFC /* GADAdSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdSize.h; sourceTree = "<group>"; };
+		B6AF4C52199964A30076AEFC /* GADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerView.h; sourceTree = "<group>"; };
+		B6AF4C53199964A30076AEFC /* GADBannerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerViewDelegate.h; sourceTree = "<group>"; };
+		B6AF4C54199964A30076AEFC /* GADInAppPurchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInAppPurchase.h; sourceTree = "<group>"; };
+		B6AF4C55199964A30076AEFC /* GADInAppPurchaseDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInAppPurchaseDelegate.h; sourceTree = "<group>"; };
+		B6AF4C56199964A30076AEFC /* GADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitial.h; sourceTree = "<group>"; };
+		B6AF4C57199964A30076AEFC /* GADInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitialDelegate.h; sourceTree = "<group>"; };
+		B6AF4C58199964A30076AEFC /* GADModules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADModules.h; sourceTree = "<group>"; };
+		B6AF4C59199964A30076AEFC /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequest.h; sourceTree = "<group>"; };
+		B6AF4C5A199964A30076AEFC /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequestError.h; sourceTree = "<group>"; };
+		B6AF4C5B199964A30076AEFC /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAds.a; sourceTree = "<group>"; };
+		B6AF4C5C199964A30076AEFC /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		B6AF4C60199964F00076AEFC /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		B6AF4C62199965030076AEFC /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		B6AF4C64199965090076AEFC /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		B6AF4C66199965130076AEFC /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		B6AF4C681999651B0076AEFC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -620,17 +646,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6AF4C691999651B0076AEFC /* SystemConfiguration.framework in Frameworks */,
+				B6AF4C67199965130076AEFC /* StoreKit.framework in Frameworks */,
+				B6AF4C65199965090076AEFC /* MessageUI.framework in Frameworks */,
+				B6AF4C63199965030076AEFC /* CoreTelephony.framework in Frameworks */,
+				B6042675199579FF00726F6F /* AudioToolbox.framework in Frameworks */,
+				B6AF4C61199964F00076AEFC /* AdSupport.framework in Frameworks */,
 				B6042673199579FF00726F6F /* OpenAL.framework in Frameworks */,
 				B6042679199579FF00726F6F /* UIKit.framework in Frameworks */,
 				B604266F199579FF00726F6F /* QuartzCore.framework in Frameworks */,
 				B6042677199579FF00726F6F /* AVFoundation.framework in Frameworks */,
 				B604267D199579FF00726F6F /* CoreGraphics.framework in Frameworks */,
+				B6AF4C5D199964A30076AEFC /* libGoogleAdMobAds.a in Frameworks */,
 				B604267F199579FF00726F6F /* CoreText.framework in Frameworks */,
 				B6042671199579FF00726F6F /* OpenGLES.framework in Frameworks */,
 				B604267B199579FF00726F6F /* Foundation.framework in Frameworks */,
 				B6042687199579FF00726F6F /* libObjectiveChipmunk.a in Frameworks */,
 				B6042681199579FF00726F6F /* GLKit.framework in Frameworks */,
-				B6042675199579FF00726F6F /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,6 +690,11 @@
 		B604266D199579FF00726F6F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B6AF4C681999651B0076AEFC /* SystemConfiguration.framework */,
+				B6AF4C66199965130076AEFC /* StoreKit.framework */,
+				B6AF4C64199965090076AEFC /* MessageUI.framework */,
+				B6AF4C62199965030076AEFC /* CoreTelephony.framework */,
+				B6AF4C60199964F00076AEFC /* AdSupport.framework */,
 				B604266E199579FF00726F6F /* QuartzCore.framework */,
 				B6042670199579FF00726F6F /* OpenGLES.framework */,
 				B6042672199579FF00726F6F /* OpenAL.framework */,
@@ -675,6 +712,7 @@
 		B6042688199579FF00726F6F /* funProject */ = {
 			isa = PBXGroup;
 			children = (
+				B6AF4C5F199964A90076AEFC /* GoogleAd */,
 				B6042689199579FF00726F6F /* Resources */,
 				B60426B2199579FF00726F6F /* Libraries */,
 				B60428E719957A0100726F6F /* Classes */,
@@ -1433,6 +1471,27 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
+		B6AF4C5F199964A90076AEFC /* GoogleAd */ = {
+			isa = PBXGroup;
+			children = (
+				B6AF4C4F199964A30076AEFC /* GADAdMobExtras.h */,
+				B6AF4C50199964A30076AEFC /* GADAdNetworkExtras.h */,
+				B6AF4C51199964A30076AEFC /* GADAdSize.h */,
+				B6AF4C52199964A30076AEFC /* GADBannerView.h */,
+				B6AF4C53199964A30076AEFC /* GADBannerViewDelegate.h */,
+				B6AF4C54199964A30076AEFC /* GADInAppPurchase.h */,
+				B6AF4C55199964A30076AEFC /* GADInAppPurchaseDelegate.h */,
+				B6AF4C56199964A30076AEFC /* GADInterstitial.h */,
+				B6AF4C57199964A30076AEFC /* GADInterstitialDelegate.h */,
+				B6AF4C58199964A30076AEFC /* GADModules.h */,
+				B6AF4C59199964A30076AEFC /* GADRequest.h */,
+				B6AF4C5A199964A30076AEFC /* GADRequestError.h */,
+				B6AF4C5B199964A30076AEFC /* libGoogleAdMobAds.a */,
+				B6AF4C5C199964A30076AEFC /* README.txt */,
+			);
+			name = GoogleAd;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1507,6 +1566,7 @@
 				B60426A8199579FF00726F6F /* Icon-Small@2x.png in Resources */,
 				B604269A199579FF00726F6F /* Icon-72@2x.png in Resources */,
 				B604268B199579FF00726F6F /* Default.png in Resources */,
+				B6AF4C5E199964A30076AEFC /* README.txt in Resources */,
 				B6042694199579FF00726F6F /* Icon.png in Resources */,
 				B60426A2199579FF00726F6F /* Icon-iPad-Spotlight-iOS7@2x.png in Resources */,
 				B6042691199579FF00726F6F /* Default-Landscape~ipad.png in Resources */,
@@ -1806,6 +1866,10 @@
 					"\"$(SRCROOT)/$(PROJECT_NAME)/Libraries/Chipmunk/objectivec/include\"",
 				);
 				INFOPLIST_FILE = funProject/Resources/Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/funProject",
+				);
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-lsqlite3",
@@ -1829,6 +1893,10 @@
 					"\"$(SRCROOT)/$(PROJECT_NAME)/Libraries/Chipmunk/objectivec/include\"",
 				);
 				INFOPLIST_FILE = funProject/Resources/Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/funProject",
+				);
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-lsqlite3",
@@ -1859,6 +1927,7 @@
 				B60428F519957A0100726F6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B60428F619957A0100726F6F /* Build configuration list for PBXNativeTarget "funProject" */ = {
 			isa = XCConfigurationList;
@@ -1867,6 +1936,7 @@
 				B60428F819957A0100726F6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
