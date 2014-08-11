@@ -9,6 +9,7 @@
 
 #import "HelloWorldScene.h"
 #import "IntroScene.h"
+#import "GADBannerView.h"
 
 // -----------------------------------------------------------------------
 #pragma mark - HelloWorldScene
@@ -16,6 +17,7 @@
 
 @implementation HelloWorldScene
 {
+    GADBannerView *bannerView_;
     CCSprite *_sprite;
 }
 
@@ -58,6 +60,24 @@
     backButton.position = ccp(0.85f, 0.95f); // Top Right of screen
     [backButton setTarget:self selector:@selector(onBackClicked:)];
     [self addChild:backButton];
+    
+    
+    bannerView_ = [[GADBannerView alloc] initWithAdSize:kGADAdSizeSmartBannerLandscape];
+    
+    // Specify the ad unit ID.
+    bannerView_.adUnitID = @"ca-app-pub-6314301496407347/5426208517";
+    
+    // Let the runtime know which UIViewController to restore after taking
+    // the user wherever the ad goes and add it to the view hierarchy.
+    bannerView_.rootViewController = [CCDirector sharedDirector];
+    
+    // Initiate a generic request to load it with an ad.
+    GADRequest *request = [GADRequest request];
+    request.testDevices = @[ GAD_SIMULATOR_ID ];
+    [bannerView_ loadRequest:[GADRequest request]];
+    
+    
+    [[[CCDirector sharedDirector] view] addSubview:bannerView_];
 
     // done
 	return self;
