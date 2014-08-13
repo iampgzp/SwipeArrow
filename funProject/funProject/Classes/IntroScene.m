@@ -10,6 +10,7 @@
 // Import the interfaces
 #import "IntroScene.h"
 #import "HelloWorldScene.h"
+#import "GameWiki.h"
 
 // -----------------------------------------------------------------------
 #pragma mark - IntroScene
@@ -57,7 +58,7 @@
     CCButton *wikiButton = [CCButton buttonWithTitle:@"Intro to the game"];
     wikiButton.positionType = CCPositionTypeNormalized;;
     wikiButton.position = ccp(0.5f, 0.15f);
-    [wikiButton setTarget:self selector:@selector(onSpinningClicked:)];
+    [wikiButton setTarget:self selector:@selector(onClicked:)];
     [self addChild:wikiButton];
 
     // done
@@ -75,5 +76,18 @@
                                withTransition:[CCTransition transitionCrossFadeWithDuration:1.0f]];
 }
 
+
 // -----------------------------------------------------------------------
+
+- (void)onClicked:(id)sender
+{
+    // start spinning scene with transition
+    [[CCDirector sharedDirector] replaceScene:[GameWiki scene]
+                               withTransition:[CCTransition transitionCrossFadeWithDuration:1.0f]];
+}
+
+
+
+
+
 @end

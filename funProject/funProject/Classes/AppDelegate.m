@@ -46,6 +46,8 @@
 	return YES;
 }
 
+// inital scene
+
 -(CCScene *)startScene
 {
 	// This method should return the very first scene to be run when your app starts.

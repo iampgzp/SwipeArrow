@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D0223B0199B3B23004E598D /* GameWiki.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D0223AF199B3B23004E598D /* GameWiki.m */; };
 		B604266F199579FF00726F6F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B604266E199579FF00726F6F /* QuartzCore.framework */; };
 		B6042671199579FF00726F6F /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6042670199579FF00726F6F /* OpenGLES.framework */; };
 		B6042673199579FF00726F6F /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6042672199579FF00726F6F /* OpenAL.framework */; };
@@ -227,6 +228,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D0223AE199B3B23004E598D /* GameWiki.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameWiki.h; sourceTree = "<group>"; };
+		2D0223AF199B3B23004E598D /* GameWiki.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameWiki.m; sourceTree = "<group>"; };
 		B604266B199579FF00726F6F /* funProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = funProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B604266E199579FF00726F6F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B6042670199579FF00726F6F /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -1484,6 +1487,8 @@
 				B60428EF19957A0100726F6F /* IntroScene.m */,
 				B6AF4C7219997CB10076AEFC /* gameOver.h */,
 				B6AF4C7319997CB10076AEFC /* gameOver.m */,
+				2D0223AE199B3B23004E598D /* GameWiki.h */,
+				2D0223AF199B3B23004E598D /* GameWiki.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1683,6 +1688,7 @@
 				B604279319957A0000726F6F /* CCTMXXMLParser.m in Sources */,
 				B60427C819957A0000726F6F /* CCProfiling.m in Sources */,
 				B604282A19957A0100726F6F /* OALSuspendHandler.m in Sources */,
+				2D0223B0199B3B23004E598D /* GameWiki.m in Sources */,
 				B604285819957A0100726F6F /* CCTextField.m in Sources */,
 				B604273019957A0000726F6F /* CCNode.m in Sources */,
 				B604287019957A0100726F6F /* CCBLocalizationManager.m in Sources */,
