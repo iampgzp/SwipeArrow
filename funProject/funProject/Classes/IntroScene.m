@@ -39,7 +39,7 @@
     [self addChild:background];
     
     // Hello world
-    CCLabelTTF *label = [CCLabelTTF labelWithString:@"Hello World" fontName:@"Chalkduster" fontSize:36.0f];
+    CCLabelTTF *label = [CCLabelTTF labelWithString:@"Gesture Move" fontName:@"Chalkduster" fontSize:36.0f];
     label.positionType = CCPositionTypeNormalized;
     label.color = [CCColor redColor];
     label.position = ccp(0.5f, 0.5f); // Middle of screen
@@ -51,6 +51,14 @@
     helloWorldButton.position = ccp(0.5f, 0.35f);
     [helloWorldButton setTarget:self selector:@selector(onSpinningClicked:)];
     [self addChild:helloWorldButton];
+    
+    
+    // Introduction to the game
+    CCButton *wikiButton = [CCButton buttonWithTitle:@"Intro to the game"];
+    wikiButton.positionType = CCPositionTypeNormalized;;
+    wikiButton.position = ccp(0.5f, 0.15f);
+    [wikiButton setTarget:self selector:@selector(onSpinningClicked:)];
+    [self addChild:wikiButton];
 
     // done
 	return self;
