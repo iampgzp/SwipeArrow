@@ -24,6 +24,7 @@
     CCLabelTTF *scoreLabel;
     NSInteger r;
     NSInteger score;
+    NSInteger error;
 }
 
 // -----------------------------------------------------------------------
@@ -42,7 +43,7 @@
     // Apple recommend assigning self with supers return value
     self = [super init];
     if (!self) return(nil);
-    
+    error = 0;  //init error
     // Enable touch handling on scene node
     self.userInteractionEnabled = YES;
     
@@ -50,8 +51,9 @@
     CCNodeColor *background = [CCNodeColor nodeWithColor:[CCColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:1.0f]];
     [self addChild:background];
     
+    r = 0;  //init the initial arrow scene
+    
     // Add a sprite
-    r = 0;
     _sprite = [CCSprite spriteWithImageNamed:@"swipe_up.png"];
     _sprite.position  = ccp(self.contentSize.width/2,self.contentSize.height/2);
     [self addChild:_sprite];
@@ -81,7 +83,7 @@
     
     // add bannerview
     [[[CCDirector sharedDirector] view] addSubview:bannerView_];
-
+    
     
     //add swipe gesture recog
     UISwipeGestureRecognizer *swipeRegUp = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipe:)];
@@ -150,14 +152,14 @@
 // -----------------------------------------------------------------------
 
 -(void) touchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
-//    CGPoint touchLoc = [touch locationInNode:self];
-//    
-//    // Log touch location
-//    CCLOG(@"Move sprite to @ %@",NSStringFromCGPoint(touchLoc));
-//    
-//    // Move our sprite to touch location
-//    CCActionMoveTo *actionMove = [CCActionMoveTo actionWithDuration:1.0f position:touchLoc];
-//    [_sprite runAction:actionMove];
+    //    CGPoint touchLoc = [touch locationInNode:self];
+    //
+    //    // Log touch location
+    //    CCLOG(@"Move sprite to @ %@",NSStringFromCGPoint(touchLoc));
+    //
+    //    // Move our sprite to touch location
+    //    CCActionMoveTo *actionMove = [CCActionMoveTo actionWithDuration:1.0f position:touchLoc];
+    //    [_sprite runAction:actionMove];
 }
 
 -(void) didSwipe:(UISwipeGestureRecognizer *) swipeGestureRecognizer{
@@ -165,20 +167,28 @@
         NSLog(@"up");
         if(r == 0)
             score++;
+        else
+            error++;
     }else if(swipeGestureRecognizer.direction == UISwipeGestureRecognizerDirectionDown){
         NSLog(@"down");
         if(r == 1)
             score++;
+        else
+            error++;
     }else if(swipeGestureRecognizer.direction == UISwipeGestureRecognizerDirectionLeft){
         NSLog(@"left");
         if(r == 2)
             score++;
+        else
+            error++;
     }else if(swipeGestureRecognizer.direction == UISwipeGestureRecognizerDirectionRight){
         NSLog(@"right");
         if(r == 3)
             score++;
+        else
+            error ++;
     }
-    [self updateScore];
+    [self checkGameIsOver];  //check whether game is over
     [self changeArrow];
 }
 
@@ -219,12 +229,26 @@
     }
 }
 
-- (void)updateScore{
+//- (void)updateScore{
+//    [scoreLabel setString:[NSString stringWithFormat:@"%ld",(long)score]];
+//    if (score > 5) {
+//        [self onGameOver];
+//    }
+//}
+
+
+
+// add a logic for game over
+
+
+- (void)checkGameIsOver
+{
     [scoreLabel setString:[NSString stringWithFormat:@"%ld",(long)score]];
-    if (score > 5) {
+    if (error >= 1){
         [self onGameOver];
     }
 }
+
 
 - (void)onGameOver
 {
