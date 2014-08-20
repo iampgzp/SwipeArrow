@@ -9,7 +9,7 @@
 
 // Import the interfaces
 #import "IntroScene.h"
-#import "HelloWorldScene.h"
+#import "SwipeScene.h"
 #import "GameWiki.h"
 
 // -----------------------------------------------------------------------
@@ -72,7 +72,7 @@
 - (void)onSpinningClicked:(id)sender
 {
     // start spinning scene with transition
-    [[CCDirector sharedDirector] replaceScene:[HelloWorldScene scene]
+    [[CCDirector sharedDirector] replaceScene:[SwipeScene scene]
                                withTransition:[CCTransition transitionCrossFadeWithDuration:1.0f]];
 }
 

@@ -7,7 +7,7 @@
 //
 // -----------------------------------------------------------------------
 
-#import "HelloWorldScene.h"
+#import "SwipeScene.h"
 #import "IntroScene.h"
 #import "GADBannerView.h"
 #import "gameOver.h"
@@ -17,7 +17,7 @@
 #pragma mark - HelloWorldScene
 // -----------------------------------------------------------------------
 
-@implementation HelloWorldScene
+@implementation SwipeScene
 {
     GADBannerView *bannerView_;
     CCSprite *_sprite;
@@ -31,7 +31,7 @@
 #pragma mark - Create & Destroy
 // -----------------------------------------------------------------------
 
-+ (HelloWorldScene *)scene
++ (SwipeScene *)scene
 {
     return [[self alloc] init];
 }
@@ -188,6 +188,7 @@
         else
             error ++;
     }
+    NSLog(@"%f", _sprite.position.y);
     [self checkGameIsOver];  //check whether game is over
     [self changeArrow];
 }
@@ -228,7 +229,7 @@
         [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_right.png"] texture]];
     }
     
-    
+    _sprite.position = ccp(self.contentSize.width/2,self.contentSize.height);
     int maxDuration = 6.0;
     int rangeDuration = maxDuration;
     
@@ -254,6 +255,9 @@
 {
     [scoreLabel setString:[NSString stringWithFormat:@"%ld",(long)score]];
     if (error >= 1){
+        [self onGameOver];
+    }
+    if (_sprite.position.y < 0){
         [self onGameOver];
     }
 }
