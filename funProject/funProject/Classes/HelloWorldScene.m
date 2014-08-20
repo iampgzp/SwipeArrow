@@ -227,6 +227,15 @@
     }else if(r == 3){
         [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_right.png"] texture]];
     }
+    
+    
+    int maxDuration = 6.0;
+    int rangeDuration = maxDuration;
+    
+    //move to middle end
+    CCAction *actionMove = [CCActionMoveTo actionWithDuration:rangeDuration position:CGPointMake(self.contentSize.width/2, 5)];
+    // CCAction *actionRemove = [CCActionRemove action];
+    [_sprite runAction:[CCActionSequence actionWithArray:@[actionMove]]];
 }
 
 //- (void)updateScore{
