@@ -18,7 +18,7 @@
 
 @implementation IntroScene
 
-// -----------------------------------------------------------------------
+// -------------la----------------------------------------------------------
 #pragma mark - Create & Destroy
 // -----------------------------------------------------------------------
 
@@ -36,14 +36,16 @@
     if (!self) return(nil);
     
     // Create a colored background (Dark Grey)
-    CCNodeColor *background = [CCNodeColor nodeWithColor:[CCColor colorWithRed:0.2f green:0.2f blue:0.2f alpha:1.0f]];
+    CCSprite *background = [CCSprite spriteWithImageNamed:@"menu_bg.png"];
+    [background setPosition:ccp(0, 0)];
+    [background setAnchorPoint:ccp(0, 0)];
     [self addChild:background];
     
     // Hello world
     CCLabelTTF *label = [CCLabelTTF labelWithString:@"Swipe Hero" fontName:@"Chalkduster" fontSize:36.0f];
     label.positionType = CCPositionTypeNormalized;
     label.color = [CCColor redColor];
-    label.position = ccp(0.5f, 0.5f); // Middle of screen
+    label.position = ccp(0.5f, 0.75f); // Middle of screen
     [self addChild:label];
     
     // Helloworld scene button

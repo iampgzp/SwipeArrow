@@ -18,6 +18,7 @@
 		B604267D199579FF00726F6F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B604267C199579FF00726F6F /* CoreGraphics.framework */; };
 		B604267F199579FF00726F6F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B604267E199579FF00726F6F /* CoreText.framework */; };
 		B6042681199579FF00726F6F /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6042680199579FF00726F6F /* GLKit.framework */; };
+		B6042687199579FF00726F6F /* libObjectiveChipmunk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B6042684199579FF00726F6F /* libObjectiveChipmunk.a */; };
 		B604268B199579FF00726F6F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B604268A199579FF00726F6F /* Default.png */; };
 		B604268D199579FF00726F6F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B604268C199579FF00726F6F /* Default@2x.png */; };
 		B604268F199579FF00726F6F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B604268E199579FF00726F6F /* Default-568h@2x.png */; };
@@ -200,6 +201,7 @@
 		B60428E219957A0100726F6F /* LICENSE_Chipmunk.txt in Resources */ = {isa = PBXBuildFile; fileRef = B60428E119957A0100726F6F /* LICENSE_Chipmunk.txt */; };
 		B60428E619957A0100726F6F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B60428E519957A0100726F6F /* main.m */; };
 		B60428EA19957A0100726F6F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B60428E919957A0100726F6F /* AppDelegate.m */; };
+		B60428ED19957A0100726F6F /* HelloWorldScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B60428EC19957A0100726F6F /* HelloWorldScene.m */; };
 		B60428F019957A0100726F6F /* IntroScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B60428EF19957A0100726F6F /* IntroScene.m */; };
 		B668B3AA19A4F844007B6A31 /* menu_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B668B3A919A4F844007B6A31 /* menu_bg.png */; };
 		B6AF4C5D199964A30076AEFC /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B6AF4C5B199964A30076AEFC /* libGoogleAdMobAds.a */; };
@@ -623,6 +625,8 @@
 		B60428E519957A0100726F6F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Supporting Files/main.m"; sourceTree = "<group>"; };
 		B60428E819957A0100726F6F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
 		B60428E919957A0100726F6F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
+		B60428EB19957A0100726F6F /* HelloWorldScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HelloWorldScene.h; path = Classes/HelloWorldScene.h; sourceTree = "<group>"; };
+		B60428EC19957A0100726F6F /* HelloWorldScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HelloWorldScene.m; path = Classes/HelloWorldScene.m; sourceTree = "<group>"; };
 		B60428EE19957A0100726F6F /* IntroScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IntroScene.h; path = Classes/IntroScene.h; sourceTree = "<group>"; };
 		B60428EF19957A0100726F6F /* IntroScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = IntroScene.m; path = Classes/IntroScene.m; sourceTree = "<group>"; };
 		B668B3A919A4F844007B6A31 /* menu_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_bg.png; sourceTree = "<group>"; };
@@ -673,6 +677,7 @@
 				B604267F199579FF00726F6F /* CoreText.framework in Frameworks */,
 				B6042671199579FF00726F6F /* OpenGLES.framework in Frameworks */,
 				B604267B199579FF00726F6F /* Foundation.framework in Frameworks */,
+				B6042687199579FF00726F6F /* libObjectiveChipmunk.a in Frameworks */,
 				B6042681199579FF00726F6F /* GLKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1479,6 +1484,8 @@
 			children = (
 				B60428E819957A0100726F6F /* AppDelegate.h */,
 				B60428E919957A0100726F6F /* AppDelegate.m */,
+				B60428EB19957A0100726F6F /* HelloWorldScene.h */,
+				B60428EC19957A0100726F6F /* HelloWorldScene.m */,
 				B60428EE19957A0100726F6F /* IntroScene.h */,
 				B60428EF19957A0100726F6F /* IntroScene.m */,
 				B6AF4C7219997CB10076AEFC /* gameOver.h */,
@@ -1639,6 +1646,7 @@
 				B60426C3199579FF00726F6F /* CCEffect.m in Sources */,
 				B604286119957A0100726F6F /* CCBAnimationManager.m in Sources */,
 				B60427CF19957A0000726F6F /* CCVertex.m in Sources */,
+				B60428ED19957A0100726F6F /* HelloWorldScene.m in Sources */,
 				B6042703199579FF00726F6F /* CCAnimationCache.m in Sources */,
 				B60427BD19957A0000726F6F /* base64.c in Sources */,
 				B604274619957A0000726F6F /* CCParticleSystemBase.m in Sources */,
