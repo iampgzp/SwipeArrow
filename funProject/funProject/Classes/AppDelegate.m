@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "IntroScene.h"
 #import "SwipeScene.h"
+#import "GameWiki.h"
 #import "WXApi.h"
 
 @implementation AppDelegate
@@ -55,7 +56,7 @@
 -(CCScene *)startScene
 {
 	// This method should return the very first scene to be run when your app starts.
-	return [IntroScene scene];
+	return [GameWiki scene];
 }
 
 -(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
