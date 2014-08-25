@@ -9,7 +9,6 @@
 
 #import "SwipeScene.h"
 #import "IntroScene.h"
-#import "GADBannerView.h"
 #import "gameOver.h"
 
 
@@ -19,7 +18,6 @@
 
 @implementation SwipeScene
 {
-    GADBannerView *bannerView_;
     CCSprite *_sprite;
     CCLabelTTF *scoreLabel;
     NSInteger r;
@@ -59,31 +57,12 @@
     [self addChild:_sprite];
     
     // Create a back button
-    CCButton *backButton = [CCButton buttonWithTitle:@"[ Menu ]" fontName:@"Verdana-Bold" fontSize:18.0f];
+    CCButton *backButton = [CCButton buttonWithTitle:@"[ Menu ]" fontName:@"Verdana-Bold" fontSize:20.0f];
+    [backButton setColor:[CCColor blackColor]];
     backButton.positionType = CCPositionTypeNormalized;
-    backButton.position = ccp(0.85f, 0.85f); // Top Right of screen
+    backButton.position = ccp(0.15f, 0.95f); // Top Right of screen
     [backButton setTarget:self selector:@selector(onBackClicked:)];
     [self addChild:backButton];
-    
-    
-    // admob implementation
-    bannerView_ = [[GADBannerView alloc] initWithAdSize:kGADAdSizeSmartBannerLandscape];
-    
-    // Specify the ad unit ID.
-    bannerView_.adUnitID = @"ca-app-pub-6314301496407347/5426208517";
-    
-    // Let the runtime know which UIViewController to restore after taking
-    // the user wherever the ad goes and add it to the view hierarchy.
-    bannerView_.rootViewController = [CCDirector sharedDirector];
-    
-    // Initiate a generic request to load it with an ad.
-    GADRequest *request = [GADRequest request];
-    request.testDevices = @[ GAD_SIMULATOR_ID ];
-    [bannerView_ loadRequest:[GADRequest request]];
-    
-    // add bannerview
-    [[[CCDirector sharedDirector] view] addSubview:bannerView_];
-    
     
     //add swipe gesture recog
     UISwipeGestureRecognizer *swipeRegUp = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipe:)];
@@ -104,14 +83,14 @@
     
     
     // add string score
-    scoreLabel = [[CCLabelTTF alloc] initWithString:@"score" fontName:@"Verdana" fontSize:20.0];
+    scoreLabel = [[CCLabelTTF alloc] initWithString:@"score" fontName:@"Verdana-bold" fontSize:20.0];
     scoreLabel.color = [CCColor blackColor];
     scoreLabel.positionType = CCPositionTypeNormalized;
-    scoreLabel.position = ccp(0.5f,0.15f);
+    scoreLabel.position = ccp(0.85f,0.95f);
     [self addChild:scoreLabel];
     score = 0;
     
-    
+    [self schedule:@selector(checkGameIsOver) interval:0.5f];
     
     // done
 	return self;
@@ -260,6 +239,7 @@
     if (_sprite.position.y < 0){
         [self onGameOver];
     }
+    
 }
 
 
@@ -267,7 +247,15 @@
 {
     // start spinning scene with transition
     [[CCDirector sharedDirector] replaceScene:[gameOver sceneWithScore:score]
-                               withTransition:[CCTransition transitionCrossFadeWithDuration:1.0f]];
+                               withTransition:[CCTransition transitionFadeWithDuration:1.0f]];
+    [self removeGesture];
+    
+}
+
+- (void)removeGesture{
+    while ([[CCDirector sharedDirector] view].gestureRecognizers.count) {
+        [[[CCDirector sharedDirector] view] removeGestureRecognizer:[[[CCDirector sharedDirector] view].gestureRecognizers objectAtIndex:0]];
+    }
 }
 
 // -----------------------------------------------------------------------

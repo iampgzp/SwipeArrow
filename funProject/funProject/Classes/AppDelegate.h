@@ -8,7 +8,9 @@
 // -----------------------------------------------------------------------
 
 #import "cocos2d.h"
+#import "WXApi.h"
 
-@interface AppDelegate : CCAppDelegate
+
+@interface AppDelegate : CCAppDelegate <WXApiDelegate>
 
 @end

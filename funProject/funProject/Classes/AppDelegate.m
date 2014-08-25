@@ -10,10 +10,11 @@
 #import "AppDelegate.h"
 #import "IntroScene.h"
 #import "SwipeScene.h"
+#import "WXApi.h"
 
 @implementation AppDelegate
 
-// 
+
 -(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 	// This is the only app delegate method you need to implement when inheriting from CCAppDelegate.
@@ -24,7 +25,7 @@
 	// If you want more flexibility, you can configure Cocos2D yourself instead of calling setupCocos2dWithOptions:.
 	[self setupCocos2dWithOptions:@{
 		// Show the FPS and draw call label.
-		CCSetupShowDebugStats: @(YES),
+//		CCSetupShowDebugStats: @(YES),
 		
 		// More examples of options you might want to fiddle with:
 		// (See CCAppDelegate.h for more information)
@@ -42,6 +43,9 @@
 		// Make iPad's act like they run at a 2x content scale. (iPad retina 4x)
 //		CCSetupTabletScale2X: @(YES),
 	}];
+    
+    [WXApi registerApp:@"wx0c3214f5bd2bb550"];
+    
 	
 	return YES;
 }
@@ -53,5 +57,15 @@
 	// This method should return the very first scene to be run when your app starts.
 	return [IntroScene scene];
 }
+
+-(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
+    return [WXApi handleOpenURL:url delegate:self];
+}
+
+-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+    return [WXApi handleOpenURL:url delegate:self];
+}
+
+
 
 @end

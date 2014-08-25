@@ -212,6 +212,8 @@
 		B6790FBA19A7E5CD00BB5460 /* swipe_left_red.png in Resources */ = {isa = PBXBuildFile; fileRef = B6790FB619A7E5CD00BB5460 /* swipe_left_red.png */; };
 		B6790FBB19A7E5CD00BB5460 /* swipe_down_red.png in Resources */ = {isa = PBXBuildFile; fileRef = B6790FB719A7E5CD00BB5460 /* swipe_down_red.png */; };
 		B6790FBC19A7E5CD00BB5460 /* swipe_top_red.png in Resources */ = {isa = PBXBuildFile; fileRef = B6790FB819A7E5CD00BB5460 /* swipe_top_red.png */; };
+		B695DA2819ABABAE0044C545 /* Capture_it.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B695DA2719ABABAE0044C545 /* Capture_it.ttf */; };
+		B695DA2C19ABC1640044C545 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B695DA2919ABC1640044C545 /* libWeChatSDK.a */; };
 		B6AF4C5D199964A30076AEFC /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B6AF4C5B199964A30076AEFC /* libGoogleAdMobAds.a */; };
 		B6AF4C5E199964A30076AEFC /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = B6AF4C5C199964A30076AEFC /* README.txt */; };
 		B6AF4C61199964F00076AEFC /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6AF4C60199964F00076AEFC /* AdSupport.framework */; };
@@ -646,6 +648,10 @@
 		B6790FB619A7E5CD00BB5460 /* swipe_left_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swipe_left_red.png; sourceTree = "<group>"; };
 		B6790FB719A7E5CD00BB5460 /* swipe_down_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swipe_down_red.png; sourceTree = "<group>"; };
 		B6790FB819A7E5CD00BB5460 /* swipe_top_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swipe_top_red.png; sourceTree = "<group>"; };
+		B695DA2719ABABAE0044C545 /* Capture_it.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Capture_it.ttf; sourceTree = "<group>"; };
+		B695DA2919ABC1640044C545 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		B695DA2A19ABC1640044C545 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		B695DA2B19ABC1640044C545 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		B6AF4C4F199964A30076AEFC /* GADAdMobExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdMobExtras.h; sourceTree = "<group>"; };
 		B6AF4C50199964A30076AEFC /* GADAdNetworkExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdNetworkExtras.h; sourceTree = "<group>"; };
 		B6AF4C51199964A30076AEFC /* GADAdSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdSize.h; sourceTree = "<group>"; };
@@ -690,6 +696,7 @@
 				B604266F199579FF00726F6F /* QuartzCore.framework in Frameworks */,
 				B6042677199579FF00726F6F /* AVFoundation.framework in Frameworks */,
 				B604267D199579FF00726F6F /* CoreGraphics.framework in Frameworks */,
+				B695DA2C19ABC1640044C545 /* libWeChatSDK.a in Frameworks */,
 				B6AF4C5D199964A30076AEFC /* libGoogleAdMobAds.a in Frameworks */,
 				B604267F199579FF00726F6F /* CoreText.framework in Frameworks */,
 				B6042671199579FF00726F6F /* OpenGLES.framework in Frameworks */,
@@ -758,6 +765,7 @@
 		B6042689199579FF00726F6F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B695DA2719ABABAE0044C545 /* Capture_it.ttf */,
 				B6AF4C6A199974300076AEFC /* swipe_down.png */,
 				B668B3A919A4F844007B6A31 /* menu_bg.png */,
 				B6AF4C6B199974300076AEFC /* swipe_left.png */,
@@ -805,6 +813,9 @@
 		B60426B2199579FF00726F6F /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				B695DA2919ABC1640044C545 /* libWeChatSDK.a */,
+				B695DA2A19ABC1640044C545 /* WXApi.h */,
+				B695DA2B19ABC1640044C545 /* WXApiObject.h */,
 				B60427E319957A0000726F6F /* LICENSE_cocos2d.txt */,
 				B604287319957A0100726F6F /* LICENSE_CCBReader.txt */,
 				B60428E119957A0100726F6F /* LICENSE_Chipmunk.txt */,
@@ -1586,6 +1597,11 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = LUSS;
+				TargetAttributes = {
+					B604266A199579FF00726F6F = {
+						DevelopmentTeam = MDB4L93355;
+					};
+				};
 			};
 			buildConfigurationList = B6042666199579FF00726F6F /* Build configuration list for PBXProject "funProject" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1643,6 +1659,7 @@
 				B604269E199579FF00726F6F /* Icon-76@2x.png in Resources */,
 				B60426AC199579FF00726F6F /* Icon-Spotlight-iOS7@2x.png in Resources */,
 				B604269C199579FF00726F6F /* Icon-76.png in Resources */,
+				B695DA2819ABABAE0044C545 /* Capture_it.ttf in Resources */,
 				B60426B1199579FF00726F6F /* iTunesArtwork@2x in Resources */,
 				B6AF4C71199974300076AEFC /* swipe_right.png in Resources */,
 			);
@@ -1921,6 +1938,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1940,6 +1959,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1949,6 +1969,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "funProject/Supporting Files/Prefix.pch";
@@ -1967,6 +1989,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
