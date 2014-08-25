@@ -11,7 +11,6 @@
 #import "IntroScene.h"
 #import "SwipeScene.h"
 #import "GameWiki.h"
-
 // -----------------------------------------------------------------------
 #pragma mark - IntroScene
 // -----------------------------------------------------------------------
@@ -49,18 +48,20 @@
     [self addChild:label];
     
     // Helloworld scene button
-    CCButton *helloWorldButton = [CCButton buttonWithTitle:@"[ Start ]" fontName:@"Verdana-Bold" fontSize:18.0f];
+    CCButton *helloWorldButton = [CCButton buttonWithTitle:@"" spriteFrame:[CCSpriteFrame frameWithImageNamed:@"play.png"]];
     helloWorldButton.positionType = CCPositionTypeNormalized;
-    helloWorldButton.position = ccp(0.5f, 0.35f);
+    helloWorldButton.position = ccp(0.35f, 0.35f);
     [helloWorldButton setTarget:self selector:@selector(onSpinningClicked:)];
     [self addChild:helloWorldButton];
     
     
+    
+    
     // Introduction to the game
-    CCButton *wikiButton = [CCButton buttonWithTitle:@"Intro to the game"];
+    CCButton *wikiButton = [CCButton buttonWithTitle:@"" spriteFrame:[CCSpriteFrame frameWithImageNamed:@"Question.png"]];
     wikiButton.positionType = CCPositionTypeNormalized;;
-    wikiButton.position = ccp(0.5f, 0.15f);
-    [wikiButton setTarget:self selector:@selector(onClicked:)];
+    wikiButton.position = ccp(0.65f, 0.35f);
+    [wikiButton setTarget:self selector:@selector(showGameCenter)];
     [self addChild:wikiButton];
 
     // done
@@ -88,7 +89,16 @@
                                withTransition:[CCTransition transitionCrossFadeWithDuration:1.0f]];
 }
 
-
+//-------------------------------------------------------------------------
+- (void) showGameCenter
+{
+    GKGameCenterViewController *gameCenterController = [[GKGameCenterViewController alloc] init];
+    if (gameCenterController != nil)
+    {
+        gameCenterController.gameCenterDelegate = self;
+        [[CCDirector sharedDirector] presentViewController: gameCenterController animated: YES completion:nil];
+    }
+}
 
 
 
