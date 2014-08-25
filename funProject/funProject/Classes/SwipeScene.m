@@ -82,6 +82,24 @@
     [[[CCDirector sharedDirector] view] addGestureRecognizer:swipeRegRight];
     
     
+    UISwipeGestureRecognizer *swipeRegRightVersa = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipe:)];
+    swipeRegRightVersa.direction = UISwipeGestureRecognizerDirectionLeft;
+    [[[CCDirector sharedDirector] view] addGestureRecognizer:swipeRegRightVersa];
+    
+    UISwipeGestureRecognizer *swipeRegLeftVersa = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipe:)];
+    swipeRegLeftVersa.direction = UISwipeGestureRecognizerDirectionRight;
+    [[[CCDirector sharedDirector] view] addGestureRecognizer:swipeRegLeftVersa];
+    
+    
+    UISwipeGestureRecognizer *swipeRegUpVersa = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipe:)];
+    swipeRegUpVersa.direction = UISwipeGestureRecognizerDirectionDown;
+    [[[CCDirector sharedDirector] view] addGestureRecognizer:swipeRegUpVersa];
+    
+    UISwipeGestureRecognizer *swipeRegDownVersa = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipe:)];
+    swipeRegDownVersa.direction = UISwipeGestureRecognizerDirectionUp;
+    [[[CCDirector sharedDirector] view] addGestureRecognizer:swipeRegDownVersa];
+    
+    
     // add string score
     scoreLabel = [[CCLabelTTF alloc] initWithString:@"score" fontName:@"Verdana-bold" fontSize:20.0];
     scoreLabel.color = [CCColor blackColor];
@@ -144,25 +162,25 @@
 -(void) didSwipe:(UISwipeGestureRecognizer *) swipeGestureRecognizer{
     if (swipeGestureRecognizer.direction == UISwipeGestureRecognizerDirectionUp) {
         NSLog(@"up");
-        if(r == 0)
+        if(r == 0 || r == 5)
             score++;
         else
             error++;
     }else if(swipeGestureRecognizer.direction == UISwipeGestureRecognizerDirectionDown){
         NSLog(@"down");
-        if(r == 1)
+        if(r == 1 || r == 4)
             score++;
         else
             error++;
     }else if(swipeGestureRecognizer.direction == UISwipeGestureRecognizerDirectionLeft){
         NSLog(@"left");
-        if(r == 2)
+        if(r == 2 || r == 7)
             score++;
         else
             error++;
     }else if(swipeGestureRecognizer.direction == UISwipeGestureRecognizerDirectionRight){
         NSLog(@"right");
-        if(r == 3)
+        if(r == 3 || r == 6)
             score++;
         else
             error ++;
@@ -193,9 +211,9 @@
 
 - (void)changeArrow
 {
-    int r2 = arc4random()%4;
+    int r2 = arc4random()%8;
     while (r2 == r) {
-        r2 = arc4random()%4;
+        r2 = arc4random()%8;
     }
     r = r2;
     if (r == 0) {
@@ -206,7 +224,16 @@
         [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_left.png"] texture]];
     }else if(r == 3){
         [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_right.png"] texture]];
+    }else if(r == 4){
+        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_top_red.png"] texture]];
+    }else if(r == 5){
+        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_down_red.png"] texture]];
+    }else if(r == 6){
+        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_left_red.png"] texture]];
+    }else if(r == 7){
+        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_right_red.png"] texture]];
     }
+    
     
     _sprite.position = ccp(self.contentSize.width/2,self.contentSize.height);
     int maxDuration = 6.0;
