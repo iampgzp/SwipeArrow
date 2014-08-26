@@ -9,7 +9,7 @@
 #import "cocos2d.h"
 #import "cocos2d-ui.h"
 
-@interface GameWiki : CCScene
+@interface GameWiki : CCScene <CCPhysicsCollisionDelegate>
 
 + (GameWiki *) scene;
 - (id) init;
