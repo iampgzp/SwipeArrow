@@ -23,6 +23,8 @@
     NSInteger r;
     NSInteger score;
     NSInteger error;
+    NSMutableArray *arrayOfArrow;
+    
 }
 
 // -----------------------------------------------------------------------
@@ -49,12 +51,20 @@
     CCNodeColor *background = [CCNodeColor nodeWithColor:[CCColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:1.0f]];
     [self addChild:background];
     
-    r = 0;  //init the initial arrow scene
+    r = 0;  //init the key r which correspond to up-arrow
     
     // Add a sprite
     _sprite = [CCSprite spriteWithImageNamed:@"swipe_up.png"];
     _sprite.position  = ccp(self.contentSize.width/2,self.contentSize.height/2);
     [self addChild:_sprite];
+    
+    
+    //init NSMutableArray which contains all the arrows
+    if (!arrayOfArrow) {
+        arrayOfArrow = [[NSMutableArray alloc] init];
+    }
+    
+    
     
     // Create a back button
     CCButton *backButton = [CCButton buttonWithTitle:@"[ Menu ]" fontName:@"Verdana-Bold" fontSize:20.0f];
@@ -64,7 +74,8 @@
     [backButton setTarget:self selector:@selector(onBackClicked:)];
     [self addChild:backButton];
     
-    //add swipe gesture recog
+ //--------------------------------------------------------------------------------------------------------------
+    //add swipe gesture recog to the scene
     UISwipeGestureRecognizer *swipeRegUp = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipe:)];
     swipeRegUp.direction = UISwipeGestureRecognizerDirectionUp;
     [[[CCDirector sharedDirector] view] addGestureRecognizer:swipeRegUp];
@@ -98,6 +109,7 @@
     UISwipeGestureRecognizer *swipeRegDownVersa = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipe:)];
     swipeRegDownVersa.direction = UISwipeGestureRecognizerDirectionUp;
     [[[CCDirector sharedDirector] view] addGestureRecognizer:swipeRegDownVersa];
+//----------------------------------------------------------------------------------------------------------------
     
     
     // add string score
@@ -183,7 +195,7 @@
         if(r == 3 || r == 6)
             score++;
         else
-            error ++;
+            error++;
     }
     NSLog(@"%f", _sprite.position.y);
     [self checkGameIsOver];  //check whether game is over
@@ -233,8 +245,6 @@
     }else if(r == 7){
         [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_right_red.png"] texture]];
     }
-    
-    
     _sprite.position = ccp(self.contentSize.width/2,self.contentSize.height);
     int maxDuration = 6.0;
     int rangeDuration = maxDuration;
@@ -254,12 +264,43 @@
 
 
 
+//generate random sprite
+// need to insert not only sprite, also r which denotes sprite
+- (CCSprite *) generateRandomSprite
+{
+    CCSprite *randomSprite;
+    int r2 = arc4random()%8;
+    
+    if (r2 == 0) {
+        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_up.png"] texture]];
+    }else if(r2 == 1){
+        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_down.png"] texture]];
+    }else if(r2 == 2){
+        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_left.png"] texture]];
+    }else if(r2 == 3){
+        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_right.png"] texture]];
+    }else if(r2 == 4){
+        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_top_red.png"] texture]];
+    }else if(r2 == 5){
+        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_down_red.png"] texture]];
+    }else if(r2 == 6){
+        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_left_red.png"] texture]];
+    }else if(r2 == 7){
+        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_right_red.png"] texture]];
+    }
+    
+    return randomSprite;
+    
+}
+
+
+
 // add a logic for game over
 
 
 - (void)checkGameIsOver
 {
-    [scoreLabel setString:[NSString stringWithFormat:@"%ld",(long)score]];
+    [scoreLabel setString:[NSString stringWithFormat:@"%ld",(long)score]]; //update score
     if (error >= 1){
         [self onGameOver];
     }
@@ -278,6 +319,9 @@
     [self removeGesture];
     
 }
+
+
+//remove gesture from the scene
 
 - (void)removeGesture{
     while ([[CCDirector sharedDirector] view].gestureRecognizers.count) {

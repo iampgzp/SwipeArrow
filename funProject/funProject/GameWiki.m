@@ -30,7 +30,7 @@
     
     physicWorld = [CCPhysicsNode node];
     [physicWorld setGravity:ccp(0, -29.8)];
-//    [physicWorld setDebugDraw:YES];
+    //    [physicWorld setDebugDraw:YES];
     [physicWorld setCollisionDelegate:self];
     [self addChild:physicWorld];
     
@@ -68,7 +68,7 @@
     [physicWorld addChild:ground];
     
     [self schedule:@selector(addBrick) interval:1.0f];
-                    
+    
     return self;
 }
 
@@ -88,7 +88,7 @@
         y = y + 32.0f;
         [animationArray addObject:array];
     }
-    }
+}
 
 - (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
     [hero stopAllActions];
@@ -134,7 +134,7 @@
     [brick.physicsBody setCollisionGroup:@"bossGroup"];
     [brick.physicsBody setCollisionType:@"brickCollision"];
     [physicWorld addChild:brick];
-
+    
 }
 
 - (BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair bossCollision:(CCNode *)boss heroCollision:(CCNode *)hero{

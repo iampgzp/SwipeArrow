@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2D0223B0199B3B23004E598D /* GameWiki.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D0223AF199B3B23004E598D /* GameWiki.m */; };
+		2DF2A64019B24D3400E91DAE /* Arrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF2A63F19B24D3400E91DAE /* Arrow.m */; };
 		B604266F199579FF00726F6F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B604266E199579FF00726F6F /* QuartzCore.framework */; };
 		B6042671199579FF00726F6F /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6042670199579FF00726F6F /* OpenGLES.framework */; };
 		B6042673199579FF00726F6F /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6042672199579FF00726F6F /* OpenAL.framework */; };
@@ -244,6 +245,8 @@
 /* Begin PBXFileReference section */
 		2D0223AE199B3B23004E598D /* GameWiki.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameWiki.h; sourceTree = "<group>"; };
 		2D0223AF199B3B23004E598D /* GameWiki.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameWiki.m; sourceTree = "<group>"; };
+		2DF2A63E19B24D3400E91DAE /* Arrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Arrow.h; sourceTree = "<group>"; };
+		2DF2A63F19B24D3400E91DAE /* Arrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Arrow.m; sourceTree = "<group>"; };
 		B604266B199579FF00726F6F /* funProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = funProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B604266E199579FF00726F6F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B6042670199579FF00726F6F /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -1537,6 +1540,8 @@
 				2D0223AF199B3B23004E598D /* GameWiki.m */,
 				B6790FA819A7D96100BB5460 /* SwipeScene.h */,
 				B6790FA919A7D96100BB5460 /* SwipeScene.m */,
+				2DF2A63E19B24D3400E91DAE /* Arrow.h */,
+				2DF2A63F19B24D3400E91DAE /* Arrow.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1753,6 +1758,7 @@
 				B604279319957A0000726F6F /* CCTMXXMLParser.m in Sources */,
 				B60427C819957A0000726F6F /* CCProfiling.m in Sources */,
 				B604282A19957A0100726F6F /* OALSuspendHandler.m in Sources */,
+				2DF2A64019B24D3400E91DAE /* Arrow.m in Sources */,
 				2D0223B0199B3B23004E598D /* GameWiki.m in Sources */,
 				B604285819957A0100726F6F /* CCTextField.m in Sources */,
 				B604273019957A0000726F6F /* CCNode.m in Sources */,
