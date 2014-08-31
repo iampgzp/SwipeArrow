@@ -10,6 +10,7 @@
 #import "SwipeScene.h"
 #import "IntroScene.h"
 #import "gameOver.h"
+#import "Arrow.h"
 
 
 // -----------------------------------------------------------------------
@@ -24,7 +25,6 @@
     NSInteger score;
     NSInteger error;
     NSMutableArray *arrayOfArrow;
-    
 }
 
 // -----------------------------------------------------------------------
@@ -51,21 +51,35 @@
     CCNodeColor *background = [CCNodeColor nodeWithColor:[CCColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:1.0f]];
     [self addChild:background];
     
-    r = 0;  //init the key r which correspond to up-arrow
-    
-    // Add a sprite
-    _sprite = [CCSprite spriteWithImageNamed:@"swipe_up.png"];
-    _sprite.position  = ccp(self.contentSize.width/2,self.contentSize.height/2);
-    [self addChild:_sprite];
-    
     
     //init NSMutableArray which contains all the arrows
     if (!arrayOfArrow) {
         arrayOfArrow = [[NSMutableArray alloc] init];
     }
     
+    Arrow *firstArrow = [[Arrow alloc]init];
+    r = firstArrow.r;
     
     
+    NSLog(@"this is %d",r);
+    
+   // r = 0;  //init the key r which correspond to up-arrow
+    
+    // Add a sprite
+    //_sprite = [CCSprite spriteWithImageNamed:@"swipe_up.png"];
+    
+    
+    if (!firstArrow.sprite){
+        NSLog(@"it is null");
+    }
+    _sprite = firstArrow.sprite;
+    _sprite.position  = ccp(self.contentSize.width/2,self.contentSize.height/2);
+    [self addChild:_sprite];
+    
+    
+    
+    
+
     // Create a back button
     CCButton *backButton = [CCButton buttonWithTitle:@"[ Menu ]" fontName:@"Verdana-Bold" fontSize:20.0f];
     [backButton setColor:[CCColor blackColor]];
@@ -250,9 +264,18 @@
     int rangeDuration = maxDuration;
     
     //move to middle end
+    
+   // CCAction *actionMove1 = [CCActionBezierTo actionWithDuration:rangeDuration scale:6];
     CCAction *actionMove = [CCActionMoveTo actionWithDuration:rangeDuration position:CGPointMake(self.contentSize.width/2, 5)];
+    
+   // CCActionSpeed *actionMove = [[CCActionSpeed alloc]init];
+    
+    
+    
+   // actionMove s
+    
     // CCAction *actionRemove = [CCActionRemove action];
-    [_sprite runAction:[CCActionSequence actionWithArray:@[actionMove]]];
+    [_sprite runAction:actionMove];
 }
 
 //- (void)updateScore{
@@ -266,31 +289,31 @@
 
 //generate random sprite
 // need to insert not only sprite, also r which denotes sprite
-- (CCSprite *) generateRandomSprite
+- (Arrow *) generateRandomSprite
 {
-    CCSprite *randomSprite;
-    int r2 = arc4random()%8;
+//    CCSprite *randomSprite;
+//    int r2 = arc4random()%8;
+//    
+//    if (r2 == 0) {
+//        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_up.png"] texture]];
+//    }else if(r2 == 1){
+//        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_down.png"] texture]];
+//    }else if(r2 == 2){
+//        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_left.png"] texture]];
+//    }else if(r2 == 3){
+//        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_right.png"] texture]];
+//    }else if(r2 == 4){
+//        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_top_red.png"] texture]];
+//    }else if(r2 == 5){
+//        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_down_red.png"] texture]];
+//    }else if(r2 == 6){
+//        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_left_red.png"] texture]];
+//    }else if(r2 == 7){
+//        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_right_red.png"] texture]];
+//    }
     
-    if (r2 == 0) {
-        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_up.png"] texture]];
-    }else if(r2 == 1){
-        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_down.png"] texture]];
-    }else if(r2 == 2){
-        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_left.png"] texture]];
-    }else if(r2 == 3){
-        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_right.png"] texture]];
-    }else if(r2 == 4){
-        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_top_red.png"] texture]];
-    }else if(r2 == 5){
-        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_down_red.png"] texture]];
-    }else if(r2 == 6){
-        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_left_red.png"] texture]];
-    }else if(r2 == 7){
-        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_right_red.png"] texture]];
-    }
-    
-    return randomSprite;
-    
+    Arrow *randomArrow = [[Arrow alloc]init];
+    return randomArrow;
 }
 
 

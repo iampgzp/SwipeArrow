@@ -11,11 +11,12 @@
 #import "cocos2d-ui.h"
 
 @interface Arrow : NSURLProtocol
-{
-     NSInteger r;  //denote the key
-     CCSprite * _sprite;
-}
+
+
+@property (nonatomic) NSInteger r;
+@property (nonatomic) CCSprite *sprite;
 
 - (id) init;
+//- (Arrow *) generateRandomArrow;
 
 @end

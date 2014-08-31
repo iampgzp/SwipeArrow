@@ -13,28 +13,30 @@
 -(id) init
 {
     int r2 = arc4random()%8;
-    while (r2 == r) {
+    while (r2 == _r) {
         r2 = arc4random()%8;
     }
-    r = r2;
-    if (r == 0) {
-        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_up.png"] texture]];
-    }else if(r == 1){
-        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_down.png"] texture]];
-    }else if(r == 2){
-        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_left.png"] texture]];
-    }else if(r == 3){
-        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_right.png"] texture]];
-    }else if(r == 4){
-        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_top_red.png"] texture]];
-    }else if(r == 5){
-        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_down_red.png"] texture]];
-    }else if(r == 6){
-        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_left_red.png"] texture]];
-    }else if(r == 7){
-        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_right_red.png"] texture]];
+    _r = r2;
+    if (_r == 0) {
+        _sprite = [CCSprite spriteWithImageNamed:@"swipe_up.png"] ;
+    }else if(_r == 1){
+        _sprite = [CCSprite spriteWithImageNamed:@"swipe_down.png"];
+    }else if(_r == 2){
+        _sprite = [CCSprite spriteWithImageNamed:@"swipe_left.png"];
+    }else if(_r == 3){
+        _sprite = [CCSprite spriteWithImageNamed:@"swipe_right.png"];
+    }else if(_r == 4){
+        _sprite = [CCSprite spriteWithImageNamed:@"swipe_top_red.png"];
+    }else if(_r == 5){
+        _sprite = [CCSprite spriteWithImageNamed:@"swipe_down_red.png"];
+    }else if(_r == 6){
+        _sprite = [CCSprite spriteWithImageNamed:@"swipe_left_red.png"];
+    }else if(_r == 7){
+        _sprite = [CCSprite spriteWithImageNamed:@"swipe_right_red.png"];
     }
     return self;
 }
+
+
 
 @end
