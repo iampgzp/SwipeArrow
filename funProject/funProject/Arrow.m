@@ -17,6 +17,8 @@
         r2 = arc4random()%8;
     }
     _r = r2;
+    
+    //init arrow with random image
     if (_r == 0) {
         _sprite = [CCSprite spriteWithImageNamed:@"swipe_up.png"] ;
     }else if(_r == 1){

@@ -61,7 +61,7 @@
     r = firstArrow.r;
     
     
-    NSLog(@"this is %d",r);
+  //  NSLog(@"this is %d",r);
     
    // r = 0;  //init the key r which correspond to up-arrow
     
@@ -126,6 +126,9 @@
 //----------------------------------------------------------------------------------------------------------------
     
     
+    UITapGestureRecognizer *tapReg = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTap)];
+    
+    
     // add string score
     scoreLabel = [[CCLabelTTF alloc] initWithString:@"score" fontName:@"Verdana-bold" fontSize:20.0];
     scoreLabel.color = [CCColor blackColor];
@@ -136,11 +139,17 @@
     
     [self schedule:@selector(checkGameIsOver) interval:0.5f];
     
+    
+    //add an arrow each seconds, and add it into array.
+    [self schedule:@selector(generateRandomSprite) interval:1.0f];
+    
     // done
 	return self;
 }
 
 // -----------------------------------------------------------------------
+
+
 
 - (void)dealloc
 {
@@ -216,11 +225,17 @@
     [self changeArrow];
 }
 
+// confirm the location of where did the swipe start.
+// so we can decide remove which arrows from the arrow array
+
+
+
+
 // -----------------------------------------------------------------------
 #pragma mark - Button Callbacks
 // -----------------------------------------------------------------------
 
-- (void)onBackClicked:(id)sender
+-(void)onBackClicked:(id)sender
 {
     // back to intro scene with transition
     [[CCDirector sharedDirector] replaceScene:[IntroScene scene]
@@ -289,7 +304,7 @@
 
 //generate random sprite
 // need to insert not only sprite, also r which denotes sprite
-- (Arrow *) generateRandomSprite
+- (void) generateRandomSprite
 {
 //    CCSprite *randomSprite;
 //    int r2 = arc4random()%8;
@@ -313,7 +328,7 @@
 //    }
     
     Arrow *randomArrow = [[Arrow alloc]init];
-    return randomArrow;
+    [arrayOfArrow addObject:randomArrow];
 }
 
 
