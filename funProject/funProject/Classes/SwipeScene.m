@@ -59,6 +59,7 @@
     
     Arrow *firstArrow = [[Arrow alloc]init];
     r = firstArrow.r;
+    [arrayOfArrow addObject:firstArrow];
     
     
   //  NSLog(@"this is %d",r);
@@ -125,8 +126,7 @@
     [[[CCDirector sharedDirector] view] addGestureRecognizer:swipeRegDownVersa];
 //----------------------------------------------------------------------------------------------------------------
     
-    
-    UITapGestureRecognizer *tapReg = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTap)];
+ 
     
     
     // add string score
@@ -141,13 +141,15 @@
     
     
     //add an arrow each seconds, and add it into array.
-    [self schedule:@selector(generateRandomSprite) interval:1.0f];
+    [self schedule:@selector(generateRandomSprite) interval:1.0f];   //generate arrow each second
     
     // done
 	return self;
 }
 
 // -----------------------------------------------------------------------
+
+
 
 
 
@@ -195,9 +197,26 @@
 }
 
 -(void) didSwipe:(UISwipeGestureRecognizer *) swipeGestureRecognizer{
+    
+    CGPoint initialTouchPoint = [swipeGestureRecognizer locationInView:nil];
+    for (Arrow *arrow in arrayOfArrow){
+        CGPoint arrowPointRange = arrow.sprite.position;
+        CGFloat minx = arrowPointRange.x - arrow.sprite.contentSize.width/2;
+        CGFloat maxx = arrowPointRange.x + arrow.sprite.contentSize.width/2;
+        CGFloat miny = arrowPointRange.y - arrow.sprite.contentSize.height/2;
+        CGFloat maxy = arrowPointRange.y + arrow.sprite.contentSize.height/2;
+        if (initialTouchPoint.x > minx && initialTouchPoint.y < maxx && initialTouchPoint.y > miny
+            && initialTouchPoint.y < maxy){
+            //operate swipe recognition
+        }else{ //touch the wrong position
+            error++;
+        }
+    }
+    
+    
     if (swipeGestureRecognizer.direction == UISwipeGestureRecognizerDirectionUp) {
         NSLog(@"up");
-        if(r == 0 || r == 5)
+        if(r == 0 || r == 5)   //if the swipe is right, delete the arrow in the array, and destroy the  sprite on the page.
             score++;
         else
             error++;
@@ -328,7 +347,14 @@
 //    }
     
     Arrow *randomArrow = [[Arrow alloc]init];
-    [arrayOfArrow addObject:randomArrow];
+    [self addChild:randomArrow.sprite];  //add sprite into scene
+    [arrayOfArrow addObject:randomArrow]; //add the arrow to array
+    randomArrow.sprite.position = ccp(self.contentSize.width/2,self.contentSize.height);
+    int maxDuration = 6.0;
+    int rangeDuration = maxDuration;
+    CCAction *actionMove = [CCActionMoveTo actionWithDuration:rangeDuration position:CGPointMake(self.contentSize.width/2, 5)];
+    [randomArrow.sprite runAction:actionMove];
+    
 }
 
 
