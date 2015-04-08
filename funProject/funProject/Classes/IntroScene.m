@@ -71,14 +71,12 @@
     bannerView_ = [[GADBannerView alloc] initWithAdSize:kGADAdSizeSmartBannerPortrait origin:CGPointMake(0, [[CCDirector sharedDirector] viewSize].height - testBanner.frame.size.height )];
 
     // Specify the ad unit ID.
-    bannerView_.adUnitID = @"ca-app-pub-6314301496407347/5426208517";
+    bannerView_.adUnitID = @"ca-app-pub-2785203011927815/6403878687";
     // Let the runtime know which UIViewController to restore after taking
     // the user wherever the ad goes and add it to the view hierarchy.
     bannerView_.rootViewController = [CCDirector sharedDirector];
     // Initiate a generic request to load it with an ad.
-    GADRequest *request = [GADRequest request];
-    request.testDevices = @[ GAD_SIMULATOR_ID ];
-    [bannerView_ loadRequest:[GADRequest request]];
+      [bannerView_ loadRequest:[GADRequest request]];
     // add bannerview
     [[[CCDirector sharedDirector] view] addSubview:bannerView_];
     

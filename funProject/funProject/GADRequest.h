@@ -13,7 +13,7 @@
 @protocol GADAdNetworkExtras;
 
 /// Add this constant to the testDevices property's array to receive test ads on the simulator.
-#define GAD_SIMULATOR_ID @"Simulator"
+
 
 /// Genders to help deliver more relevant ads.
 typedef NS_ENUM(NSInteger, GADGender) {

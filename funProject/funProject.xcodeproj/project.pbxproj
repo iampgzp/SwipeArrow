@@ -1613,7 +1613,7 @@
 				ORGANIZATIONNAME = LUSS;
 				TargetAttributes = {
 					B604266A199579FF00726F6F = {
-						DevelopmentTeam = MDB4L93355;
+						DevelopmentTeam = ETU837U9KS;
 					};
 				};
 			};
