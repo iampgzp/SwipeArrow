@@ -11,6 +11,8 @@
 		2DF2A64019B24D3400E91DAE /* Arrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF2A63F19B24D3400E91DAE /* Arrow.m */; };
 		884A06C51AD4ECB8005F76F5 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 884A06C31AD4ECB8005F76F5 /* GoogleMobileAds.framework */; };
 		884A06C61AD4ECB8005F76F5 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 884A06C41AD4ECB8005F76F5 /* README.txt */; };
+		884A06C91AD4EE15005F76F5 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 884A06C71AD4EE15005F76F5 /* EventKit.framework */; };
+		884A06CA1AD4EE15005F76F5 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 884A06C81AD4EE15005F76F5 /* EventKitUI.framework */; };
 		B604266F199579FF00726F6F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B604266E199579FF00726F6F /* QuartzCore.framework */; };
 		B6042671199579FF00726F6F /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6042670199579FF00726F6F /* OpenGLES.framework */; };
 		B6042673199579FF00726F6F /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6042672199579FF00726F6F /* OpenAL.framework */; };
@@ -249,6 +251,8 @@
 		2DF2A63F19B24D3400E91DAE /* Arrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Arrow.m; sourceTree = "<group>"; };
 		884A06C31AD4ECB8005F76F5 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		884A06C41AD4ECB8005F76F5 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		884A06C71AD4EE15005F76F5 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		884A06C81AD4EE15005F76F5 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 		B604266B199579FF00726F6F /* funProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = funProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B604266E199579FF00726F6F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B6042670199579FF00726F6F /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -681,19 +685,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6790FB019A7E2C600BB5460 /* GameKit.framework in Frameworks */,
-				B6AF4C691999651B0076AEFC /* SystemConfiguration.framework in Frameworks */,
-				884A06C51AD4ECB8005F76F5 /* GoogleMobileAds.framework in Frameworks */,
-				B6AF4C67199965130076AEFC /* StoreKit.framework in Frameworks */,
-				B6AF4C65199965090076AEFC /* MessageUI.framework in Frameworks */,
-				B6AF4C63199965030076AEFC /* CoreTelephony.framework in Frameworks */,
-				B6042675199579FF00726F6F /* AudioToolbox.framework in Frameworks */,
+				884A06C91AD4EE15005F76F5 /* EventKit.framework in Frameworks */,
+				884A06CA1AD4EE15005F76F5 /* EventKitUI.framework in Frameworks */,
 				B6AF4C61199964F00076AEFC /* AdSupport.framework in Frameworks */,
+				B6042675199579FF00726F6F /* AudioToolbox.framework in Frameworks */,
+				B6042677199579FF00726F6F /* AVFoundation.framework in Frameworks */,
+				B604267D199579FF00726F6F /* CoreGraphics.framework in Frameworks */,
+				B6AF4C65199965090076AEFC /* MessageUI.framework in Frameworks */,
+				B6AF4C67199965130076AEFC /* StoreKit.framework in Frameworks */,
+				B6AF4C691999651B0076AEFC /* SystemConfiguration.framework in Frameworks */,
+				B6790FB019A7E2C600BB5460 /* GameKit.framework in Frameworks */,
+				884A06C51AD4ECB8005F76F5 /* GoogleMobileAds.framework in Frameworks */,
+				B6AF4C63199965030076AEFC /* CoreTelephony.framework in Frameworks */,
 				B6042673199579FF00726F6F /* OpenAL.framework in Frameworks */,
 				B6042679199579FF00726F6F /* UIKit.framework in Frameworks */,
 				B604266F199579FF00726F6F /* QuartzCore.framework in Frameworks */,
-				B6042677199579FF00726F6F /* AVFoundation.framework in Frameworks */,
-				B604267D199579FF00726F6F /* CoreGraphics.framework in Frameworks */,
 				B695DA2C19ABC1640044C545 /* libWeChatSDK.a in Frameworks */,
 				B604267F199579FF00726F6F /* CoreText.framework in Frameworks */,
 				B6042671199579FF00726F6F /* OpenGLES.framework in Frameworks */,
@@ -738,6 +744,8 @@
 		B604266D199579FF00726F6F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				884A06C71AD4EE15005F76F5 /* EventKit.framework */,
+				884A06C81AD4EE15005F76F5 /* EventKitUI.framework */,
 				B6790FAF19A7E2C600BB5460 /* GameKit.framework */,
 				B6AF4C681999651B0076AEFC /* SystemConfiguration.framework */,
 				B6AF4C66199965130076AEFC /* StoreKit.framework */,
