@@ -11,7 +11,7 @@
 #import "IntroScene.h"
 #import "SwipeScene.h"
 #import "GameWiki.h"
-#import "GADBannerView.h"
+#import <GoogleMobileAds/GoogleMobileAds.h>
 
 // -----------------------------------------------------------------------
 #pragma mark - IntroScene
