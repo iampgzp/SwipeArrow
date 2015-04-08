@@ -11,7 +11,7 @@
 #import "IntroScene.h"
 #import "SwipeScene.h"
 #import "GameWiki.h"
-#import <GoogleMobileAds/GoogleMobileAds.h>
+
 
 // -----------------------------------------------------------------------
 #pragma mark - IntroScene
@@ -65,7 +65,7 @@
     [wikiButton setTarget:self selector:@selector(showGameCenter)];
     [self addChild:wikiButton];
 
-    
+  
     // admob implementation
     GADBannerView *testBanner = [[GADBannerView alloc] initWithAdSize:kGADAdSizeSmartBannerPortrait];
     bannerView_ = [[GADBannerView alloc] initWithAdSize:kGADAdSizeSmartBannerPortrait origin:CGPointMake(0, [[CCDirector sharedDirector] viewSize].height - testBanner.frame.size.height )];
