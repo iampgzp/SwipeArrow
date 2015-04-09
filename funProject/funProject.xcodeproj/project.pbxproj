@@ -13,6 +13,12 @@
 		884A06C61AD4ECB8005F76F5 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 884A06C41AD4ECB8005F76F5 /* README.txt */; };
 		884A06C91AD4EE15005F76F5 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 884A06C71AD4EE15005F76F5 /* EventKit.framework */; };
 		884A06CA1AD4EE15005F76F5 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 884A06C81AD4EE15005F76F5 /* EventKitUI.framework */; };
+		88AF8C961AD6283D00043229 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 88AF8C951AD6283D00043229 /* background.png */; };
+		88AF8CA51AD6346700043229 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 88AF8CA31AD6346700043229 /* iTunesArtwork.png */; };
+		88AF8CA61AD6346700043229 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88AF8CA41AD6346700043229 /* iTunesArtwork@2x.png */; };
+		88AF8CA91AD6348D00043229 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 88AF8CA71AD6348D00043229 /* Icon.png */; };
+		88AF8CAA1AD6348D00043229 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88AF8CA81AD6348D00043229 /* Icon@2x.png */; };
+		88AF8CAC1AD6507600043229 /* Icon-Spotlight-iOS7.png in Resources */ = {isa = PBXBuildFile; fileRef = 88AF8CAB1AD6507600043229 /* Icon-Spotlight-iOS7.png */; };
 		B604266F199579FF00726F6F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B604266E199579FF00726F6F /* QuartzCore.framework */; };
 		B6042671199579FF00726F6F /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6042670199579FF00726F6F /* OpenGLES.framework */; };
 		B6042673199579FF00726F6F /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6042672199579FF00726F6F /* OpenAL.framework */; };
@@ -37,12 +43,9 @@
 		B60426A0199579FF00726F6F /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = B604269F199579FF00726F6F /* Icon-120.png */; };
 		B60426A2199579FF00726F6F /* Icon-iPad-Spotlight-iOS7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B60426A1199579FF00726F6F /* Icon-iPad-Spotlight-iOS7@2x.png */; };
 		B60426A4199579FF00726F6F /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = B60426A3199579FF00726F6F /* Icon-Small-50.png */; };
-		B60426A6199579FF00726F6F /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = B60426A5199579FF00726F6F /* Icon-Small.png */; };
 		B60426A8199579FF00726F6F /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B60426A7199579FF00726F6F /* Icon-Small@2x.png */; };
 		B60426AA199579FF00726F6F /* Icon-Spotlight-iOS7.png in Resources */ = {isa = PBXBuildFile; fileRef = B60426A9199579FF00726F6F /* Icon-Spotlight-iOS7.png */; };
 		B60426AC199579FF00726F6F /* Icon-Spotlight-iOS7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B60426AB199579FF00726F6F /* Icon-Spotlight-iOS7@2x.png */; };
-		B60426AF199579FF00726F6F /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = B60426AE199579FF00726F6F /* iTunesArtwork */; };
-		B60426B1199579FF00726F6F /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = B60426B0199579FF00726F6F /* iTunesArtwork@2x */; };
 		B60426C3199579FF00726F6F /* CCEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = B60426C2199579FF00726F6F /* CCEffect.m */; };
 		B60426C5199579FF00726F6F /* CCEffectBrightness.m in Sources */ = {isa = PBXBuildFile; fileRef = B60426C4199579FF00726F6F /* CCEffectBrightness.m */; };
 		B60426C7199579FF00726F6F /* CCEffectContrast.m in Sources */ = {isa = PBXBuildFile; fileRef = B60426C6199579FF00726F6F /* CCEffectContrast.m */; };
@@ -253,6 +256,12 @@
 		884A06C41AD4ECB8005F76F5 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		884A06C71AD4EE15005F76F5 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		884A06C81AD4EE15005F76F5 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		88AF8C951AD6283D00043229 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		88AF8CA31AD6346700043229 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iTunesArtwork.png; path = Resources/Icons/iTunesArtwork.png; sourceTree = "<group>"; };
+		88AF8CA41AD6346700043229 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iTunesArtwork@2x.png"; path = "Resources/Icons/iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		88AF8CA71AD6348D00043229 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Resources/Icons/Icon.png; sourceTree = "<group>"; };
+		88AF8CA81AD6348D00043229 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Resources/Icons/Icon@2x.png"; sourceTree = "<group>"; };
+		88AF8CAB1AD6507600043229 /* Icon-Spotlight-iOS7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Spotlight-iOS7.png"; path = "Resources/Icons/Icon-Spotlight-iOS7.png"; sourceTree = "<group>"; };
 		B604266B199579FF00726F6F /* funProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = funProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B604266E199579FF00726F6F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B6042670199579FF00726F6F /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -278,13 +287,10 @@
 		B604269F199579FF00726F6F /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-120.png"; path = "Resources/Icons/Icon-120.png"; sourceTree = "<group>"; };
 		B60426A1199579FF00726F6F /* Icon-iPad-Spotlight-iOS7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-iPad-Spotlight-iOS7@2x.png"; path = "Resources/Icons/Icon-iPad-Spotlight-iOS7@2x.png"; sourceTree = "<group>"; };
 		B60426A3199579FF00726F6F /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50.png"; path = "Resources/Icons/Icon-Small-50.png"; sourceTree = "<group>"; };
-		B60426A5199579FF00726F6F /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "Resources/Icons/Icon-Small.png"; sourceTree = "<group>"; };
 		B60426A7199579FF00726F6F /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "Resources/Icons/Icon-Small@2x.png"; sourceTree = "<group>"; };
 		B60426A9199579FF00726F6F /* Icon-Spotlight-iOS7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Spotlight-iOS7.png"; path = "Resources/Icons/Icon-Spotlight-iOS7.png"; sourceTree = "<group>"; };
 		B60426AB199579FF00726F6F /* Icon-Spotlight-iOS7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Spotlight-iOS7@2x.png"; path = "Resources/Icons/Icon-Spotlight-iOS7@2x.png"; sourceTree = "<group>"; };
 		B60426AD199579FF00726F6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
-		B60426AE199579FF00726F6F /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = ../iTunesArtwork; sourceTree = "<group>"; };
-		B60426B0199579FF00726F6F /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; name = "iTunesArtwork@2x"; path = "../iTunesArtwork@2x"; sourceTree = "<group>"; };
 		B60426B5199579FF00726F6F /* CCEffect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CCEffect.h; path = Libraries/cocos2d/CCEffect.h; sourceTree = "<group>"; };
 		B60426B6199579FF00726F6F /* CCEffectBrightness.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CCEffectBrightness.h; path = Libraries/cocos2d/CCEffectBrightness.h; sourceTree = "<group>"; };
 		B60426B7199579FF00726F6F /* CCEffectContrast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CCEffectContrast.h; path = Libraries/cocos2d/CCEffectContrast.h; sourceTree = "<group>"; };
@@ -780,6 +786,7 @@
 		B6042689199579FF00726F6F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				88AF8C951AD6283D00043229 /* background.png */,
 				B695DA2D19ABCD410044C545 /* boss.png */,
 				B695DA2E19ABCD410044C545 /* hero.png */,
 				B695DA2719ABABAE0044C545 /* Capture_it.ttf */,
@@ -801,8 +808,6 @@
 				B604268E199579FF00726F6F /* Default-568h@2x.png */,
 				B6042690199579FF00726F6F /* Default-Landscape~ipad.png */,
 				B60426AD199579FF00726F6F /* Info.plist */,
-				B60426AE199579FF00726F6F /* iTunesArtwork */,
-				B60426B0199579FF00726F6F /* iTunesArtwork@2x */,
 				B6042692199579FF00726F6F /* Icons */,
 			);
 			name = Resources;
@@ -811,6 +816,11 @@
 		B6042692199579FF00726F6F /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				88AF8CAB1AD6507600043229 /* Icon-Spotlight-iOS7.png */,
+				88AF8CA71AD6348D00043229 /* Icon.png */,
+				88AF8CA81AD6348D00043229 /* Icon@2x.png */,
+				88AF8CA31AD6346700043229 /* iTunesArtwork.png */,
+				88AF8CA41AD6346700043229 /* iTunesArtwork@2x.png */,
 				B6042693199579FF00726F6F /* Icon.png */,
 				B6042695199579FF00726F6F /* Icon@2x.png */,
 				B6042697199579FF00726F6F /* Icon-72.png */,
@@ -820,7 +830,6 @@
 				B604269F199579FF00726F6F /* Icon-120.png */,
 				B60426A1199579FF00726F6F /* Icon-iPad-Spotlight-iOS7@2x.png */,
 				B60426A3199579FF00726F6F /* Icon-Small-50.png */,
-				B60426A5199579FF00726F6F /* Icon-Small.png */,
 				B60426A7199579FF00726F6F /* Icon-Small@2x.png */,
 				B60426A9199579FF00726F6F /* Icon-Spotlight-iOS7.png */,
 				B60426AB199579FF00726F6F /* Icon-Spotlight-iOS7@2x.png */,
@@ -1594,7 +1603,7 @@
 		B6042663199579FF00726F6F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = LUSS;
 				TargetAttributes = {
 					B604266A199579FF00726F6F = {
@@ -1626,6 +1635,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6790FB319A7E56400BB5460 /* web.png in Resources */,
+				88AF8C961AD6283D00043229 /* background.png in Resources */,
 				B604268D199579FF00726F6F /* Default@2x.png in Resources */,
 				B60426A0199579FF00726F6F /* Icon-120.png in Resources */,
 				B6042696199579FF00726F6F /* Icon@2x.png in Resources */,
@@ -1638,31 +1648,33 @@
 				B604268B199579FF00726F6F /* Default.png in Resources */,
 				B6042694199579FF00726F6F /* Icon.png in Resources */,
 				B6AF4C6E199974300076AEFC /* swipe_down.png in Resources */,
+				88AF8CA51AD6346700043229 /* iTunesArtwork.png in Resources */,
 				884A06C61AD4ECB8005F76F5 /* README.txt in Resources */,
 				B60426A2199579FF00726F6F /* Icon-iPad-Spotlight-iOS7@2x.png in Resources */,
+				88AF8CA91AD6348D00043229 /* Icon.png in Resources */,
 				B6790FB419A7E56400BB5460 /* Question.png in Resources */,
 				B668B3AA19A4F844007B6A31 /* menu_bg.png in Resources */,
 				B6042691199579FF00726F6F /* Default-Landscape~ipad.png in Resources */,
 				B6AF4C70199974300076AEFC /* swipe_up.png in Resources */,
 				B6790FAE19A7DB3200BB5460 /* play.png in Resources */,
 				B6790FBA19A7E5CD00BB5460 /* swipe_left_red.png in Resources */,
-				B60426A6199579FF00726F6F /* Icon-Small.png in Resources */,
 				B60426A4199579FF00726F6F /* Icon-Small-50.png in Resources */,
 				B60428E219957A0100726F6F /* LICENSE_Chipmunk.txt in Resources */,
 				B6042698199579FF00726F6F /* Icon-72.png in Resources */,
+				88AF8CAC1AD6507600043229 /* Icon-Spotlight-iOS7.png in Resources */,
 				B695DA2F19ABCD410044C545 /* boss.png in Resources */,
 				B604287419957A0100726F6F /* LICENSE_CCBReader.txt in Resources */,
 				B60427E419957A0000726F6F /* LICENSE_cocos2d.txt in Resources */,
 				B604268F199579FF00726F6F /* Default-568h@2x.png in Resources */,
 				B695DA3219ABE1500044C545 /* brick.png in Resources */,
-				B60426AF199579FF00726F6F /* iTunesArtwork in Resources */,
 				B60426AA199579FF00726F6F /* Icon-Spotlight-iOS7.png in Resources */,
 				B695DA3019ABCD410044C545 /* hero.png in Resources */,
 				B604269E199579FF00726F6F /* Icon-76@2x.png in Resources */,
+				88AF8CA61AD6346700043229 /* iTunesArtwork@2x.png in Resources */,
+				88AF8CAA1AD6348D00043229 /* Icon@2x.png in Resources */,
 				B60426AC199579FF00726F6F /* Icon-Spotlight-iOS7@2x.png in Resources */,
 				B604269C199579FF00726F6F /* Icon-76.png in Resources */,
 				B695DA2819ABABAE0044C545 /* Capture_it.ttf in Resources */,
-				B60426B1199579FF00726F6F /* iTunesArtwork@2x in Resources */,
 				B6AF4C71199974300076AEFC /* swipe_right.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1863,10 +1875,18 @@
 		B60428F119957A0100726F6F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					DEBUG,
@@ -1874,9 +1894,14 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1885,16 +1910,28 @@
 		B60428F219957A0100726F6F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
 					"NS_BLOCK_ASSERTIONS=1",
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
@@ -1906,7 +1943,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				EXECUTABLE_EXTENSION = a;
 				EXECUTABLE_PREFIX = lib;
@@ -1923,7 +1959,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				EXECUTABLE_EXTENSION = a;
 				EXECUTABLE_PREFIX = lib;
@@ -1940,7 +1975,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1977,7 +2011,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

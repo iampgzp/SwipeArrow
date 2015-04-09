@@ -48,8 +48,14 @@
     self.userInteractionEnabled = YES;
     
     // Create a colored background (Dark Grey)
-    CCNodeColor *background = [CCNodeColor nodeWithColor:[CCColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:1.0f]];
-    [self addChild:background];
+    //CCNodeColor *background = [CCNodeColor nodeWithColor:[CCColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:1.0f]];
+    
+    // add background picture
+    CCSprite* backgroundWithPic = [CCSprite spriteWithImageNamed:@"background.png"];
+    backgroundWithPic.anchorPoint = CGPointMake(0, 0);
+    [self addChild:backgroundWithPic];
+    
+   // [self addChild:background];
     
     
     //init NSMutableArray which contains all the arrows

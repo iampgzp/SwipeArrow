@@ -26,7 +26,9 @@
 - (id) init
 {
     self = [super init];
-    if (!self) return(nil);
+    if (!self){
+        return nil;
+    }
     
     physicWorld = [CCPhysicsNode node];
     [physicWorld setGravity:ccp(0, -29.8)];
