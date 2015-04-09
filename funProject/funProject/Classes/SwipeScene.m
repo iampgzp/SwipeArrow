@@ -63,6 +63,7 @@
         arrayOfArrow = [[NSMutableArray alloc] init];
     }
     
+    // the center arrow in the initial scene
     Arrow *firstArrow = [[Arrow alloc]init];
     r = firstArrow.r;
     [arrayOfArrow addObject:firstArrow];
@@ -202,6 +203,9 @@
     //    [_sprite runAction:actionMove];
 }
 
+
+
+// logic of how to decide game continue or over
 -(void) didSwipe:(UISwipeGestureRecognizer *) swipeGestureRecognizer{
     
     CGPoint initialTouchPoint = [swipeGestureRecognizer locationInView:nil];
@@ -374,6 +378,7 @@
     if (error >= 1){
         [self onGameOver];
     }
+    // disable this part for now.
     if (_sprite.position.y < 0){
         [self onGameOver];
     }

@@ -19,6 +19,7 @@
 		88AF8CA91AD6348D00043229 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 88AF8CA71AD6348D00043229 /* Icon.png */; };
 		88AF8CAA1AD6348D00043229 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88AF8CA81AD6348D00043229 /* Icon@2x.png */; };
 		88AF8CAC1AD6507600043229 /* Icon-Spotlight-iOS7.png in Resources */ = {isa = PBXBuildFile; fileRef = 88AF8CAB1AD6507600043229 /* Icon-Spotlight-iOS7.png */; };
+		88AF8CAE1AD6515100043229 /* Icon-Spotlight-iOS7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88AF8CAD1AD6515100043229 /* Icon-Spotlight-iOS7@2x.png */; };
 		B604266F199579FF00726F6F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B604266E199579FF00726F6F /* QuartzCore.framework */; };
 		B6042671199579FF00726F6F /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6042670199579FF00726F6F /* OpenGLES.framework */; };
 		B6042673199579FF00726F6F /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6042672199579FF00726F6F /* OpenAL.framework */; };
@@ -41,9 +42,7 @@
 		B604269C199579FF00726F6F /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = B604269B199579FF00726F6F /* Icon-76.png */; };
 		B604269E199579FF00726F6F /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B604269D199579FF00726F6F /* Icon-76@2x.png */; };
 		B60426A0199579FF00726F6F /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = B604269F199579FF00726F6F /* Icon-120.png */; };
-		B60426A2199579FF00726F6F /* Icon-iPad-Spotlight-iOS7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B60426A1199579FF00726F6F /* Icon-iPad-Spotlight-iOS7@2x.png */; };
 		B60426A4199579FF00726F6F /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = B60426A3199579FF00726F6F /* Icon-Small-50.png */; };
-		B60426A8199579FF00726F6F /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B60426A7199579FF00726F6F /* Icon-Small@2x.png */; };
 		B60426AA199579FF00726F6F /* Icon-Spotlight-iOS7.png in Resources */ = {isa = PBXBuildFile; fileRef = B60426A9199579FF00726F6F /* Icon-Spotlight-iOS7.png */; };
 		B60426AC199579FF00726F6F /* Icon-Spotlight-iOS7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B60426AB199579FF00726F6F /* Icon-Spotlight-iOS7@2x.png */; };
 		B60426C3199579FF00726F6F /* CCEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = B60426C2199579FF00726F6F /* CCEffect.m */; };
@@ -262,6 +261,7 @@
 		88AF8CA71AD6348D00043229 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Resources/Icons/Icon.png; sourceTree = "<group>"; };
 		88AF8CA81AD6348D00043229 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Resources/Icons/Icon@2x.png"; sourceTree = "<group>"; };
 		88AF8CAB1AD6507600043229 /* Icon-Spotlight-iOS7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Spotlight-iOS7.png"; path = "Resources/Icons/Icon-Spotlight-iOS7.png"; sourceTree = "<group>"; };
+		88AF8CAD1AD6515100043229 /* Icon-Spotlight-iOS7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Spotlight-iOS7@2x.png"; path = "Resources/Icons/Icon-Spotlight-iOS7@2x.png"; sourceTree = "<group>"; };
 		B604266B199579FF00726F6F /* funProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = funProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B604266E199579FF00726F6F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B6042670199579FF00726F6F /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -285,9 +285,7 @@
 		B604269B199579FF00726F6F /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-76.png"; path = "Resources/Icons/Icon-76.png"; sourceTree = "<group>"; };
 		B604269D199579FF00726F6F /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-76@2x.png"; path = "Resources/Icons/Icon-76@2x.png"; sourceTree = "<group>"; };
 		B604269F199579FF00726F6F /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-120.png"; path = "Resources/Icons/Icon-120.png"; sourceTree = "<group>"; };
-		B60426A1199579FF00726F6F /* Icon-iPad-Spotlight-iOS7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-iPad-Spotlight-iOS7@2x.png"; path = "Resources/Icons/Icon-iPad-Spotlight-iOS7@2x.png"; sourceTree = "<group>"; };
 		B60426A3199579FF00726F6F /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50.png"; path = "Resources/Icons/Icon-Small-50.png"; sourceTree = "<group>"; };
-		B60426A7199579FF00726F6F /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "Resources/Icons/Icon-Small@2x.png"; sourceTree = "<group>"; };
 		B60426A9199579FF00726F6F /* Icon-Spotlight-iOS7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Spotlight-iOS7.png"; path = "Resources/Icons/Icon-Spotlight-iOS7.png"; sourceTree = "<group>"; };
 		B60426AB199579FF00726F6F /* Icon-Spotlight-iOS7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Spotlight-iOS7@2x.png"; path = "Resources/Icons/Icon-Spotlight-iOS7@2x.png"; sourceTree = "<group>"; };
 		B60426AD199579FF00726F6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
@@ -728,6 +726,30 @@
 			path = "../../../Downloads/GoogleMobileAdsSdkiOS-7.1.0";
 			sourceTree = "<group>";
 		};
+		88AF8CB11AD651CA00043229 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2DF2A63E19B24D3400E91DAE /* Arrow.h */,
+				2DF2A63F19B24D3400E91DAE /* Arrow.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		88AF8CB21AD651DE00043229 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B60428EE19957A0100726F6F /* IntroScene.h */,
+				B60428EF19957A0100726F6F /* IntroScene.m */,
+				B6AF4C7219997CB10076AEFC /* gameOver.h */,
+				B6AF4C7319997CB10076AEFC /* gameOver.m */,
+				2D0223AE199B3B23004E598D /* GameWiki.h */,
+				2D0223AF199B3B23004E598D /* GameWiki.m */,
+				B6790FA819A7D96100BB5460 /* SwipeScene.h */,
+				B6790FA919A7D96100BB5460 /* SwipeScene.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		B6042662199579FF00726F6F = {
 			isa = PBXGroup;
 			children = (
@@ -816,6 +838,7 @@
 		B6042692199579FF00726F6F /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				88AF8CAD1AD6515100043229 /* Icon-Spotlight-iOS7@2x.png */,
 				88AF8CAB1AD6507600043229 /* Icon-Spotlight-iOS7.png */,
 				88AF8CA71AD6348D00043229 /* Icon.png */,
 				88AF8CA81AD6348D00043229 /* Icon@2x.png */,
@@ -828,9 +851,7 @@
 				B604269B199579FF00726F6F /* Icon-76.png */,
 				B604269D199579FF00726F6F /* Icon-76@2x.png */,
 				B604269F199579FF00726F6F /* Icon-120.png */,
-				B60426A1199579FF00726F6F /* Icon-iPad-Spotlight-iOS7@2x.png */,
 				B60426A3199579FF00726F6F /* Icon-Small-50.png */,
-				B60426A7199579FF00726F6F /* Icon-Small@2x.png */,
 				B60426A9199579FF00726F6F /* Icon-Spotlight-iOS7.png */,
 				B60426AB199579FF00726F6F /* Icon-Spotlight-iOS7@2x.png */,
 			);
@@ -1545,18 +1566,10 @@
 		B60428E719957A0100726F6F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				88AF8CB21AD651DE00043229 /* View */,
+				88AF8CB11AD651CA00043229 /* Model */,
 				B60428E819957A0100726F6F /* AppDelegate.h */,
 				B60428E919957A0100726F6F /* AppDelegate.m */,
-				B60428EE19957A0100726F6F /* IntroScene.h */,
-				B60428EF19957A0100726F6F /* IntroScene.m */,
-				B6AF4C7219997CB10076AEFC /* gameOver.h */,
-				B6AF4C7319997CB10076AEFC /* gameOver.m */,
-				2D0223AE199B3B23004E598D /* GameWiki.h */,
-				2D0223AF199B3B23004E598D /* GameWiki.m */,
-				B6790FA819A7D96100BB5460 /* SwipeScene.h */,
-				B6790FA919A7D96100BB5460 /* SwipeScene.m */,
-				2DF2A63E19B24D3400E91DAE /* Arrow.h */,
-				2DF2A63F19B24D3400E91DAE /* Arrow.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1639,9 +1652,9 @@
 				B604268D199579FF00726F6F /* Default@2x.png in Resources */,
 				B60426A0199579FF00726F6F /* Icon-120.png in Resources */,
 				B6042696199579FF00726F6F /* Icon@2x.png in Resources */,
-				B60426A8199579FF00726F6F /* Icon-Small@2x.png in Resources */,
 				B6790FB919A7E5CD00BB5460 /* swipe_right_red.png in Resources */,
 				B6790FBB19A7E5CD00BB5460 /* swipe_down_red.png in Resources */,
+				88AF8CAE1AD6515100043229 /* Icon-Spotlight-iOS7@2x.png in Resources */,
 				B6AF4C6F199974300076AEFC /* swipe_left.png in Resources */,
 				B604269A199579FF00726F6F /* Icon-72@2x.png in Resources */,
 				B6790FBC19A7E5CD00BB5460 /* swipe_top_red.png in Resources */,
@@ -1650,7 +1663,6 @@
 				B6AF4C6E199974300076AEFC /* swipe_down.png in Resources */,
 				88AF8CA51AD6346700043229 /* iTunesArtwork.png in Resources */,
 				884A06C61AD4ECB8005F76F5 /* README.txt in Resources */,
-				B60426A2199579FF00726F6F /* Icon-iPad-Spotlight-iOS7@2x.png in Resources */,
 				88AF8CA91AD6348D00043229 /* Icon.png in Resources */,
 				B6790FB419A7E56400BB5460 /* Question.png in Resources */,
 				B668B3AA19A4F844007B6A31 /* menu_bg.png in Resources */,
