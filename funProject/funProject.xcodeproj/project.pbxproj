@@ -23,6 +23,7 @@
 		88AF8CB41AD787E300043229 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 88AF8CB31AD787E300043229 /* Default.png */; };
 		88AF8CB61AD7882A00043229 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88AF8CB51AD7882A00043229 /* Default@2x.png */; };
 		88AF8CB81AD7887800043229 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88AF8CB71AD7887800043229 /* Default-568h@2x.png */; };
+		88AF8CBC1AD7A9B100043229 /* swipers-introscene.png in Resources */ = {isa = PBXBuildFile; fileRef = 88AF8CBB1AD7A9B100043229 /* swipers-introscene.png */; };
 		B604266F199579FF00726F6F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B604266E199579FF00726F6F /* QuartzCore.framework */; };
 		B6042671199579FF00726F6F /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6042670199579FF00726F6F /* OpenGLES.framework */; };
 		B6042673199579FF00726F6F /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6042672199579FF00726F6F /* OpenAL.framework */; };
@@ -265,6 +266,7 @@
 		88AF8CB31AD787E300043229 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		88AF8CB51AD7882A00043229 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		88AF8CB71AD7887800043229 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		88AF8CBB1AD7A9B100043229 /* swipers-introscene.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swipers-introscene.png"; sourceTree = "<group>"; };
 		B604266B199579FF00726F6F /* funProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = funProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B604266E199579FF00726F6F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B6042670199579FF00726F6F /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -808,6 +810,7 @@
 		B6042689199579FF00726F6F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				88AF8CBB1AD7A9B100043229 /* swipers-introscene.png */,
 				88AF8CB71AD7887800043229 /* Default-568h@2x.png */,
 				88AF8CB51AD7882A00043229 /* Default@2x.png */,
 				88AF8CB31AD787E300043229 /* Default.png */,
@@ -1668,6 +1671,7 @@
 				88AF8CB81AD7887800043229 /* Default-568h@2x.png in Resources */,
 				B6042691199579FF00726F6F /* Default-Landscape~ipad.png in Resources */,
 				B6AF4C70199974300076AEFC /* swipe_up.png in Resources */,
+				88AF8CBC1AD7A9B100043229 /* swipers-introscene.png in Resources */,
 				B6790FAE19A7DB3200BB5460 /* play.png in Resources */,
 				B6790FBA19A7E5CD00BB5460 /* swipe_left_red.png in Resources */,
 				B60426A4199579FF00726F6F /* Icon-Small-50.png in Resources */,

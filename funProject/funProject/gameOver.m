@@ -27,10 +27,13 @@
     // Apple recommend assigning self with supers return value
     self = [super init];
     if (!self) return(nil);
+    CCSprite* backgroundWithPic = [CCSprite spriteWithImageNamed:@"swipers-introscene.png"];
+    backgroundWithPic.anchorPoint = CGPointMake(0, 0);
+    [self addChild:backgroundWithPic];
     
     //bg
-    CCNodeColor *bg_color = [[CCNodeColor alloc] initWithColor:[CCColor whiteColor]];
-    [self addChild:bg_color];
+//    CCNodeColor *bg_color = [[CCNodeColor alloc] initWithColor:[CCColor whiteColor]];
+//    [self addChild:bg_color];
     
     // Hello world
     CCLabelTTF *label = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"Game Over"] fontName:@"Chalkduster" fontSize:36.0f];

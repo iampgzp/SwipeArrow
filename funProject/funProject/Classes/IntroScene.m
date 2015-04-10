@@ -40,8 +40,12 @@
     if (!self) return(nil);
     
     // Create a colored background
-    CCNodeColor *bg_color = [CCNodeColor nodeWithColor:[CCColor whiteColor]];
-    [self addChild:bg_color];
+//    CCNodeColor *bg_color = [CCNodeColor nodeWithColor:[CCColor whiteColor]];
+//    [self addChild:bg_color];
+    
+    CCSprite* backgroundWithPic = [CCSprite spriteWithImageNamed:@"swipers-introscene.png"];
+    backgroundWithPic.anchorPoint = CGPointMake(0, 0);
+    [self addChild:backgroundWithPic];
     
     // Game Title
     CCLabelTTF *label = [CCLabelTTF labelWithString:@"Swipe Hero" fontName:@"Noteworthy-bold" fontSize:40.0f];

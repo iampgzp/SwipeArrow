@@ -63,35 +63,6 @@
         arrayOfArrow = [[NSMutableArray alloc] init];
     }
     
-//    if (!dictOfArrow){
-//        dictOfArrow = [[NSMutableDictionary alloc] init];
-//    }
-    
-    // the center arrow in the initial scene
-//    Arrow *firstArrow = [[Arrow alloc]init];
-//    r = firstArrow.r;
-    //[arrayOfArrow addObject:firstArrow];
-    
-    
-  //  NSLog(@"this is %d",r);
-    
-   // r = 0;  //init the key r which correspond to up-arrow
-    
-    // Add a sprite
-    //_sprite = [CCSprite spriteWithImageNamed:@"swipe_up.png"];
-    
-    
-//    if (!firstArrow.sprite){
-//        NSLog(@"it is null");
-//    }
-//    _sprite = firstArrow.sprite;
-//    _sprite.position  = ccp(self.contentSize.width/2,self.contentSize.height/2);
-//    [self addChild:_sprite];
-    
-    
-    
-    
-
     // Create a back button
     CCButton *backButton = [CCButton buttonWithTitle:@"[ Menu ]" fontName:@"Verdana-Bold" fontSize:20.0f];
     [backButton setColor:[CCColor blackColor]];
@@ -154,6 +125,8 @@
     //add an arrow each seconds, and add it into array.
     [self schedule:@selector(generateRandomSprite) interval:1.0f];   //generate arrow each second
     
+    [self schedule:@selector(checkArraySize) interval: 0.5f];
+    
     // done
 	return self;
 }
@@ -168,13 +141,16 @@
     
 }
 
+- (void) checkArraySize{
+    if (arrayOfArrow.count >= 2){
+        NSLog(@"current array size larger than 1");
+        [self onGameOver];
+    }
+}
 
 // logic of how to decide game continue or over
 -(void) didSwipe:(UISwipeGestureRecognizer *) swipeGestureRecognizer{
-    
-    // get the touch location
-    //    CGPoint initialTouchPoint = [swipeGestureRecognizer locationInView: nil];
-    //    NSLog(@"current swipe position %f , %f", initialTouchPoint.x, initialTouchPoint.y);
+
     NSLog(@"detected swipe gesture ..");
     
     // we only allow one arrow
@@ -184,22 +160,6 @@
     }
     Arrow * currentArrow;
     for (Arrow *arrow in arrayOfArrow){
-        //        CGPoint arrowPointRange = arrow.sprite.position;
-        //        //debug use
-        //        NSLog(@"current sprite position %f %f", arrowPointRange.x, arrowPointRange.y);
-        //        int max = 0;
-        //        //get max of arrow width or height
-        //        if (arrow.sprite.contentSize.height < arrow.sprite.contentSize.width){
-        //            max = arrow.sprite.contentSize.width;
-        //        }else{
-        //            max = arrow.sprite.contentSize.height;
-        //        }
-        //
-        //        NSLog(@"max is %d", max);
-        ////        CGFloat minx = arrowPointRange.x - max/2;
-        ////        CGFloat maxx = arrowPointRange.x + max/2;
-        //        CGFloat miny = arrowPointRange.y - max/2;
-        //        CGFloat maxy = arrowPointRange.y + max/2;
         int r = arrow.r;
         if (swipeGestureRecognizer.direction == UISwipeGestureRecognizerDirectionUp) {
             NSLog(@"up");
@@ -345,59 +305,6 @@
     [[CCDirector sharedDirector] replaceScene:[IntroScene scene]
                                withTransition:[CCTransition transitionPushWithDirection:CCTransitionDirectionRight duration:1.0f]];
 }
-
-// -----------------------------------------------------------------------
-
-
-
-//// -----------------------------------------------------------------------
-//#pragma mark - Random logic
-//// -----------------------------------------------------------------------
-//
-//- (void)changeArrow
-//{
-//    int r2 = arc4random()%8;
-//    while (r2 == r) {
-//        r2 = arc4random()%8;
-//    }
-//    r = r2;
-//    if (r == 0) {
-//        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_up.png"] texture]];
-//    }else if(r == 1){
-//        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_down.png"] texture]];
-//    }else if(r == 2){
-//        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_left.png"] texture]];
-//    }else if(r == 3){
-//        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_right.png"] texture]];
-//    }else if(r == 4){
-//        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_top_red.png"] texture]];
-//    }else if(r == 5){
-//        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_down_red.png"] texture]];
-//    }else if(r == 6){
-//        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_left_red.png"] texture]];
-//    }else if(r == 7){
-//        [_sprite setTexture:[[CCSprite spriteWithImageNamed:@"swipe_right_red.png"] texture]];
-//    }
-//    _sprite.position = ccp(self.contentSize.width/2,self.contentSize.height);
-//    int maxDuration = 6.0;
-//    int rangeDuration = maxDuration;
-//    
-//    //move to middle end
-//    
-//   // CCAction *actionMove1 = [CCActionBezierTo actionWithDuration:rangeDuration scale:6];
-//    CCAction *actionMove = [CCActionMoveTo actionWithDuration:rangeDuration position:CGPointMake(self.contentSize.width/2, 5)];
-//    
-//   // CCActionSpeed *actionMove = [[CCActionSpeed alloc]init];
-//    
-//    
-//    
-//   // actionMove s
-//    
-//    // CCAction *actionRemove = [CCActionRemove action];
-//    [_sprite runAction:actionMove];
-//}
-
-
 
 
 
